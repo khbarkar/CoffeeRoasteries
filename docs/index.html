@@ -1,204 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danish Coffee Atlas</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danish Coffee - Tried</title>
+    <link rel="stylesheet" href="styles-fallback.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body data-bs-theme="dark">
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top coffee-navbar">
-        <div class="container">
-            <a class="navbar-brand fw-bold nes-text is-primary" href="#">Danish Coffee Atlas</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto me-3">
-                    <li class="nav-item"><a class="nav-link" href="#explore">Explore</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#coffee-stats">Insights</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Language">
-                    <button class="btn btn-outline-light lang-btn active nes-btn" data-lang="en">EN</button>
-                    <button class="btn btn-outline-light lang-btn nes-btn" data-lang="da">DA</button>
-                </div>
-            </div>
-        </div>
+    <style>
+      /* Inline test styles: should visibly change background and navbar color */
+      body { background: #f8fafc; }
+      .navbar-brand { color: #0d6efd !important; font-weight:700; }
+      #roasteries .card { box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Danish Coffee — My List</a>
+      </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero-section d-flex align-items-center justify-content-center text-center">
-        <div class="container">
-            <div class="nes-container is-rounded is-dark">
-                <h1 class="hero-title display-4 fw-bold mb-3 nes-text">Denmark's Roasteries</h1>
-                <p class="lead text-cream mb-4">Explore local roasteries across Denmark</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="input-group input-group-lg">
-                        <input type="text" id="searchBox" class="form-control search-input nes-input" placeholder="Search for roasteries, cities, or regions...">
-                        <button class="btn btn-coffee nes-btn is-warning" type="button" id="searchBtn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <main class="container">
+      <div class="d-flex flex-column flex-md-row align-items-start gap-3 mt-4">
+        <h1 class="m-0">Roasteries I've Tried</h1>
+        <div class="ms-md-3 w-100">
+          <div class="input-group mb-2">
+            <span class="input-group-text">Search</span>
+            <input id="search" class="form-control" placeholder="Filter by name or note">
+            <select id="sort" class="form-select" style="max-width:180px">
+              <option value="alpha">Sort: A → Z</option>
+              <option value="starred">Sort: Starred First</option>
+            </select>
+          </div>
+          <p class="note-instructions mb-0">Manage notes by editing <code>comments.json</code> in this folder; refresh the page to see them. Stars are stored locally in your browser.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Explore Section -->
-    <section id="explore" class="py-5">
-        <div class="container">
-            <h2 class="section-title h3 fw-bold mb-4">Explore by Region</h2>
+      <div id="roasteries" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mt-3"></div>
+    </main>
 
-            <!-- Region Filter Pills -->
-            <div class="d-flex flex-wrap gap-2 mb-4" id="regionFilters">
-                <button class="btn btn-sm btn-coffee-pill active region-chip" data-region="all">All Regions</button>
-                <button class="btn btn-sm btn-coffee-pill region-chip" data-region="Nordjylland">North Jutland</button>
-                <button class="btn btn-sm btn-coffee-pill region-chip" data-region="Midtjylland">Central Jutland</button>
-                <button class="btn btn-sm btn-coffee-pill region-chip" data-region="Syddanmark">Southern Denmark</button>
-                <button class="btn btn-sm btn-coffee-pill region-chip" data-region="Sj&aelig;lland">Zealand</button>
-                <button class="btn btn-sm btn-coffee-pill region-chip" data-region="Hovedstaden">Capital Region</button>
-            </div>
-
-            <!-- Roastery Grid -->
-            <div class="row g-4" id="roastery-list">
-                <!-- Cards injected by app.js -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats / Insights -->
-    <section id="coffee-stats" class="py-5 stats-section">
-        <div class="container">
-            <p class="eyebrow-label text-uppercase small text-cream-muted ls-wide mb-1">Insights</p>
-            <h2 class="stats-section-title h3 fw-bold mb-1">Data-driven stories from Danish coffee</h2>
-            <p class="stats-lede text-cream-muted mb-4">Quick snapshots that pair with the directory below&mdash;kept concise so you stay in flow.</p>
-
-            <div class="row g-4">
-                <!-- Card 1: Aarhus -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card coffee-card h-100">
-                        <div class="card-body">
-                            <p class="mini-label text-uppercase small text-cream-muted mb-1">City profile</p>
-                            <h3 class="card-title h6 fw-bold">Aarhus: Denmark's Second Coffee Capital</h3>
-                            <div class="pill-stat mt-3 mb-3">
-                                <span class="stat-number h3 fw-bold mb-0">9</span>
-                                <span class="stat-caption text-cream-muted ms-2">roasteries in Aarhus</span>
-                            </div>
-                            <ul class="stat-list list-unstyled mb-0">
-                                <li>1 roastery per 39,000 residents</li>
-                                <li>2x higher density than the average European city</li>
-                                <li>Micro-roastery scene growing ~8% per year</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: National snapshot -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card coffee-card h-100">
-                        <div class="card-body">
-                            <p class="mini-label text-uppercase small text-cream-muted mb-1">National snapshot</p>
-                            <h3 class="card-title h6 fw-bold">Denmark by the numbers</h3>
-                            <ul class="stat-list list-unstyled mb-0 mt-3">
-                                <li>The Capital Region has more roasteries per km&sup2; than any other Nordic capital.</li>
-                                <li>The average Danish roastery produces under 250 kg per week&mdash;a micro-roastery country.</li>
-                                <li>Denmark drinks 4.5 cups of coffee per person per day&mdash;top 5 in the world.</li>
-                                <li>Copenhagen Coffee Collective was among the first in Europe to adopt 100% transparent pricing.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Origins -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card coffee-card h-100">
-                        <div class="card-body">
-                            <p class="mini-label text-uppercase small text-cream-muted mb-1">Origins</p>
-                            <h3 class="card-title h6 fw-bold">Most common origin countries</h3>
-                            <ol class="stat-list-ordered mt-3 mb-0 ps-3">
-                                <li>Ethiopia (unofficial #1)</li>
-                                <li>Colombia</li>
-                                <li>Kenya</li>
-                                <li>Brazil</li>
-                                <li>Guatemala</li>
-                                <li>Costa Rica</li>
-                                <li>Rwanda</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Purpose-driven (wide) -->
-                <div class="col-md-6 col-lg-12">
-                    <div class="card coffee-card">
-                        <div class="card-body">
-                            <p class="mini-label text-uppercase small text-cream-muted mb-1">Sourcing signals</p>
-                            <h3 class="card-title h6 fw-bold mb-3">Purpose-driven roasting</h3>
-                            <div class="row g-3">
-                                <div class="col-sm-4">
-                                    <div class="pill-stat">
-                                        <span class="stat-number h4 fw-bold mb-0">68%</span>
-                                        <span class="stat-caption text-cream-muted ms-2">organic / pesticide-free</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="pill-stat">
-                                        <span class="stat-number h4 fw-bold mb-0">54%</span>
-                                        <span class="stat-caption text-cream-muted ms-2">direct farm or co-op</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="pill-stat">
-                                        <span class="stat-number h4 fw-bold mb-0">22%</span>
-                                        <span class="stat-caption text-cream-muted ms-2">compostable packaging</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-5">
-        <div class="container">
-            <h2 class="section-title h3 fw-bold mb-4">From the Blog</h2>
-            <div class="row g-4" id="blog-list">
-                <!-- Blog cards injected by app.js -->
-            </div>
-            <div id="blog-post" class="d-none">
-                <!-- Single blog post rendered here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-4 text-center coffee-footer">
-        <div class="container">
-            <p class="mb-0 small text-cream-muted">&copy; 2024 Danish Coffee Roastery Discovery. Crafted with love for coffee.</p>
-        </div>
+    <footer class="text-center py-4 text-muted small">
+      Built for GitHub Pages — serve the `docs/` folder.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="roasteries-data.js"></script>
-    <script src="translations.js"></script>
-    <script>
-        window.GOOGLE_PLACES_API_KEY = "";
-    </script>
-    <script src="app.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
