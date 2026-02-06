@@ -389,23 +389,21 @@ function updateStats() {
 function createRoasteryCard(name) {
     const data = getRoastery(name);
     const card = document.createElement('div');
-    card.className = 'roastery-card';
+    card.className = 'roastery-card nes-container is-rounded';
     card.dataset.name = name;
 
     card.innerHTML = `
         <div class="card-header">
-            <label class="checkbox-container">
+            <label class="nes-checkbox checkbox-container">
                 <input type="checkbox" class="purchased-check" ${data.purchased ? 'checked' : ''}>
-                <span class="checkmark"></span>
+                <span></span>
             </label>
             <h2 class="roastery-name">${name}</h2>
-            <button class="star-toggle ${data.starred ? 'starred' : ''}" aria-label="Toggle favorite">
-                ★
-            </button>
+            <button class="star-toggle nes-btn ${data.starred ? 'is-warning' : 'is-disabled'}" aria-label="Toggle favorite">★</button>
         </div>
 
         <div class="espresso-section">
-            <label class="espresso-label">
+            <label class="nes-checkbox espresso-label">
                 <input type="checkbox" class="espresso-check" ${data.hasEspresso ? 'checked' : ''}>
                 <span>No Espresso (skip this roastery)</span>
             </label>
@@ -413,17 +411,17 @@ function createRoasteryCard(name) {
 
         <div class="comment-section">
             <label>What did you buy?</label>
-            <textarea class="comment-input" placeholder="Add notes about your purchase...">${data.comment}</textarea>
+            <textarea class="comment-input nes-textarea" placeholder="Add notes about your purchase...">${data.comment}</textarea>
         </div>
 
         <div class="website-section">
             <label>Website:</label>
-            <input type="text" class="website-input" placeholder="https://..." value="${data.website}">
+            <input type="text" class="website-input nes-input" placeholder="https://..." value="${data.website}">
         </div>
 
         <div class="region-section">
             <label>Region/City:</label>
-            <input type="text" class="region-input" placeholder="e.g., Copenhagen, Aarhus..." value="${data.region}">
+            <input type="text" class="region-input nes-input" placeholder="e.g., Copenhagen, Aarhus..." value="${data.region}">
         </div>
     `;
 
