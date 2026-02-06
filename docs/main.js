@@ -2,19 +2,19 @@ import { roasteries } from './list.js';
 
 // City positions as percentage of the map image (x%, y%)
 const cityPositions = {
-  "Copenhagen": { x: 73, y: 56 },
-  "Aarhus": { x: 46, y: 38 },
-  "Odense": { x: 44, y: 57 },
-  "Vejle": { x: 36, y: 48 },
-  "Sønderborg": { x: 37, y: 68 },
-  "Herning": { x: 28, y: 41 },
-  "Viborg": { x: 32, y: 32 },
-  "Ebeltoft": { x: 52, y: 37 },
-  "Svendborg": { x: 47, y: 64 },
-  "Odsherred": { x: 61, y: 47 },
-  "Køge": { x: 68, y: 55 },
-  "Vendsyssel": { x: 38, y: 13 },
-  "Nørre Snede": { x: 31, y: 45 }
+  "Copenhagen": { x: 76, y: 60 },
+  "Aarhus": { x: 52, y: 42 },
+  "Odense": { x: 50, y: 62 },
+  "Vejle": { x: 43, y: 52 },
+  "Sønderborg": { x: 47, y: 74 },
+  "Herning": { x: 36, y: 46 },
+  "Viborg": { x: 40, y: 37 },
+  "Ebeltoft": { x: 56, y: 40 },
+  "Svendborg": { x: 53, y: 68 },
+  "Odsherred": { x: 64, y: 51 },
+  "Køge": { x: 72, y: 58 },
+  "Vendsyssel": { x: 44, y: 17 },
+  "Nørre Snede": { x: 38, y: 49 }
 };
 
 async function loadData() {
