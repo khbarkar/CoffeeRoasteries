@@ -1,5 +1,21 @@
 import { roasteries } from './list.js';
 
+// City positions as percentage of the map image (x%, y%)
+const cityPositions = {
+  "Copenhagen": { x: 73, y: 56 },
+  "Aarhus": { x: 46, y: 38 },
+  "Odense": { x: 44, y: 57 },
+  "Vejle": { x: 36, y: 48 },
+  "Sønderborg": { x: 37, y: 68 },
+  "Herning": { x: 28, y: 41 },
+  "Viborg": { x: 32, y: 32 },
+  "Ebeltoft": { x: 52, y: 37 },
+  "Svendborg": { x: 47, y: 64 },
+  "Odsherred": { x: 61, y: 47 },
+  "Køge": { x: 68, y: 55 },
+  "Vendsyssel": { x: 38, y: 13 },
+  "Nørre Snede": { x: 31, y: 45 }
+};
 
 async function loadData() {
   try {
@@ -114,8 +130,48 @@ function renderAll(data) {
   items.forEach(i => container.appendChild(createCard(i, i.comment, i.starred)));
 }
 
-function renderMap() {
-  // Map is a static PNG image — replace denmark-map.png in the docs/ folder
+function renderMap(data) {
+  const container = document.getElementById('map-markers');
+  if (!container) return;
+
+  // Count roasteries per city
+  const cityCounts = {};
+  roasteries.forEach(r => {
+    cityCounts[r.city] = (cityCounts[r.city] || 0) + 1;
+  });
+
+  // Check which cities have starred roasteries
+  const cityStarred = {};
+  roasteries.forEach(r => {
+    if (data.stars.includes(r.name)) {
+      cityStarred[r.city] = true;
+    }
+  });
+
+  container.innerHTML = '';
+  for (const [city, pos] of Object.entries(cityPositions)) {
+    const count = cityCounts[city] || 0;
+    if (count === 0) continue;
+
+    const size = Math.min(10 + count * 2, 28);
+    const hasStarred = cityStarred[city];
+    const bg = hasStarred ? '#ffc107' : '#1D809F';
+
+    // Dot
+    const dot = document.createElement('span');
+    dot.className = 'position-absolute rounded-circle d-flex align-items-center justify-content-center';
+    dot.title = `${city}: ${count} roaster${count > 1 ? 'ies' : 'y'}`;
+    dot.style.cssText = `left:${pos.x}%;top:${pos.y}%;width:${size}px;height:${size}px;background:${bg};transform:translate(-50%,-50%);cursor:default;border:2px solid #fff;font-size:9px;color:#fff;font-weight:700;`;
+    if (count > 1) dot.textContent = count;
+    container.appendChild(dot);
+
+    // Label
+    const label = document.createElement('span');
+    label.className = 'position-absolute small fw-semibold text-dark';
+    label.style.cssText = `left:${pos.x}%;top:calc(${pos.y}% + ${size / 2 + 4}px);transform:translateX(-50%);font-size:10px;white-space:nowrap;`;
+    label.textContent = city;
+    container.appendChild(label);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

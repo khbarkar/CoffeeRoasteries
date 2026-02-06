@@ -111,7 +111,14 @@
       <div class="container px-4 px-lg-5 text-center py-5">
         <h3 class="text-secondary text-uppercase small mb-0" style="letter-spacing:2px">Locations</h3>
         <h2 class="display-6 fw-bold text-dark mb-5">Roasteries Across Denmark</h2>
-        <img src="denmark-map.png" alt="Map of Denmark showing coffee roastery locations" class="img-fluid mx-auto d-block" style="max-width:500px">
+        <div class="position-relative d-inline-block mx-auto">
+          <img src="denmark-map.png" alt="Map of Denmark showing coffee roastery locations" class="img-fluid d-block" style="max-width:500px">
+          <div id="map-markers"></div>
+        </div>
+        <div class="d-flex justify-content-center gap-4 mt-3 flex-wrap">
+          <span class="d-flex align-items-center gap-2 small text-muted"><span class="badge rounded-circle p-1" style="background:#1D809F">&nbsp;</span> Roastery city</span>
+          <span class="d-flex align-items-center gap-2 small text-muted"><span class="badge bg-warning rounded-circle p-1">&nbsp;</span> Has starred roastery</span>
+        </div>
       </div>
     </section>
 
