@@ -6,7 +6,7 @@ const translations = {
         pageTitle: "Discover Danish Coffee Roasteries",
 
         // Hero section
-        heroTitle: "Denmark’s Roasteries",
+        heroTitle: "Denmark's Roasteries",
         heroSubtitle: "Explore local roasteries across Denmark",
         searchPlaceholder: "Search for roasteries, cities, or regions...",
 
@@ -26,7 +26,7 @@ const translations = {
         legendOtherCities: "Other cities with roasteries",
 
         // Roastery card
-        visitWebsite: "Visit Website →",
+        visitWebsite: "Visit Website",
         loadingAddress: "Loading address...",
 
         // No results
@@ -34,10 +34,25 @@ const translations = {
         tryAdjusting: "Try adjusting your search or filter",
 
         // Footer
-        footerText: "© 2024 Danish Coffee Roastery Discovery. Crafted with love for coffee.",
+        footerText: "\u00a9 2024 Danish Coffee Roastery Discovery. Crafted with love for coffee.",
 
         // Regions (full names)
-        denmark: "Denmark"
+        denmark: "Denmark",
+
+        // Blog
+        blogTitle: "From the Blog",
+        readMore: "Read more",
+        backToBlog: "Back to all posts",
+
+        // Stats
+        insightsLabel: "Insights",
+        insightsTitle: "Data-driven stories from Danish coffee",
+        insightsLede: "Quick snapshots that pair with the directory below\u2014kept concise so you stay in flow.",
+
+        // Nav
+        navExplore: "Explore",
+        navInsights: "Insights",
+        navBlog: "Blog"
     },
     da: {
         // Page title
@@ -46,7 +61,7 @@ const translations = {
         // Hero section
         heroTitle: "Danmarks Risterier",
         heroSubtitle: "Udforsk lokale risterier i hele Danmark",
-        searchPlaceholder: "Søg efter risterier, byer eller regioner...",
+        searchPlaceholder: "S\u00f8g efter risterier, byer eller regioner...",
 
         // Section titles
         sectionTitle: "Udforsk efter Region",
@@ -56,26 +71,41 @@ const translations = {
         nordjylland: "Nordjylland",
         midtjylland: "Midtjylland",
         syddanmark: "Syddanmark",
-        sjaelland: "Sjælland",
+        sjaelland: "Sj\u00e6lland",
         hovedstaden: "Hovedstaden",
 
         // Map legend
-        legendMajorCities: "Større byer (København, Odense, Aarhus)",
+        legendMajorCities: "St\u00f8rre byer (K\u00f8benhavn, Odense, Aarhus)",
         legendOtherCities: "Andre byer med risterier",
 
         // Roastery card
-        visitWebsite: "Besøg Hjemmeside →",
+        visitWebsite: "Bes\u00f8g Hjemmeside",
         loadingAddress: "Henter adresse...",
 
         // No results
         noRoasteriesFound: "Ingen risterier fundet",
-        tryAdjusting: "Prøv at justere din søgning eller filter",
+        tryAdjusting: "Pr\u00f8v at justere din s\u00f8gning eller filter",
 
         // Footer
-        footerText: "© 2024 Dansk Kafferisteri Opdagelse. Lavet med kærlighed til kaffe.",
+        footerText: "\u00a9 2024 Dansk Kafferisteri Opdagelse. Lavet med k\u00e6rlighed til kaffe.",
 
         // Regions (full names)
-        denmark: "Danmark"
+        denmark: "Danmark",
+
+        // Blog
+        blogTitle: "Fra Bloggen",
+        readMore: "L\u00e6s mere",
+        backToBlog: "Tilbage til alle indl\u00e6g",
+
+        // Stats
+        insightsLabel: "Indsigter",
+        insightsTitle: "Datadrevne historier fra dansk kaffe",
+        insightsLede: "Hurtige \u00f8jebliksbilleder der passer til kataloget nedenfor\u2014holdt kort s\u00e5 du forbliver i flow.",
+
+        // Nav
+        navExplore: "Udforsk",
+        navInsights: "Indsigter",
+        navBlog: "Blog"
     }
 };
 
@@ -106,34 +136,48 @@ function setLanguage(lang) {
 function updatePageLanguage() {
     // Hero section
     const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) heroTitle.innerHTML = t('heroTitle');
-
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    if (heroSubtitle) heroSubtitle.textContent = t('heroSubtitle');
+    if (heroTitle) heroTitle.textContent = t('heroTitle');
 
     const searchBox = document.getElementById('searchBox');
     if (searchBox) searchBox.placeholder = t('searchPlaceholder');
 
     // Section title
-    const sectionTitle = document.querySelector('.section-title');
+    const sectionTitle = document.querySelector('#explore .section-title');
     if (sectionTitle) sectionTitle.textContent = t('sectionTitle');
 
     // Filter chips
-    const chips = document.querySelectorAll('.chip');
-    chips[0].textContent = t('allRegions'); // All Regions
-    chips[1].textContent = t('nordjylland');
-    chips[2].textContent = t('midtjylland');
-    chips[3].textContent = t('syddanmark');
-    chips[4].textContent = t('sjaelland');
-    chips[5].textContent = t('hovedstaden');
+    const chips = document.querySelectorAll('.region-chip');
+    if (chips.length >= 6) {
+        chips[0].textContent = t('allRegions');
+        chips[1].textContent = t('nordjylland');
+        chips[2].textContent = t('midtjylland');
+        chips[3].textContent = t('syddanmark');
+        chips[4].textContent = t('sjaelland');
+        chips[5].textContent = t('hovedstaden');
+    }
 
-    // Map legend
-    const legendItems = document.querySelectorAll('.legend-item span:last-child');
-    if (legendItems[0]) legendItems[0].textContent = t('legendMajorCities');
-    if (legendItems[1]) legendItems[1].textContent = t('legendOtherCities');
+    // Nav links
+    const navExplore = document.querySelector('a[href="#explore"]');
+    if (navExplore) navExplore.textContent = t('navExplore');
+    const navInsights = document.querySelector('a[href="#coffee-stats"]');
+    if (navInsights) navInsights.textContent = t('navInsights');
+    const navBlog = document.querySelector('a[href="#blog"]');
+    if (navBlog) navBlog.textContent = t('navBlog');
+
+    // Stats section
+    const insightsLabel = document.querySelector('.eyebrow-label');
+    if (insightsLabel) insightsLabel.textContent = t('insightsLabel');
+    const insightsTitle = document.querySelector('.stats-section-title');
+    if (insightsTitle) insightsTitle.textContent = t('insightsTitle');
+    const insightsLede = document.querySelector('.stats-lede');
+    if (insightsLede) insightsLede.textContent = t('insightsLede');
+
+    // Blog section title
+    const blogTitle = document.querySelector('#blog .section-title');
+    if (blogTitle) blogTitle.textContent = t('blogTitle');
 
     // Footer
-    const footerText = document.querySelector('.footer p');
+    const footerText = document.querySelector('footer p');
     if (footerText) footerText.textContent = t('footerText');
 
     // Re-render roasteries to update card text
