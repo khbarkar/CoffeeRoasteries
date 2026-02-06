@@ -1,0 +1,71 @@
+// Danish Coffee Roasteries Data
+// Source: Coffee Roastery Tracker Database
+
+// To make adding website URLs easy, every entry includes a website field.
+// Fill in the empty strings with the roastery’s site when you have it.
+const roasteriesData = [
+    { name: "Aekvator kaffe", region: "Syddanmark", city: "Vejle", website: "https://www.aekvatorkaffe.dk" },
+    { name: "Als Risteri", region: "Syddanmark", city: "Sønderborg", website: "" },
+    { name: "Amokka", region: "Hovedstaden", city: "Copenhagen", website: "https://amokka.com" },
+    { name: "Andersen & Maillard", region: "Hovedstaden", city: "Copenhagen", website: "https://www.andersenmaillard.dk" },
+    { name: "April Coffee Roasters", region: "Hovedstaden", city: "Copenhagen", website: "https://www.aprilcoffeeroasters.com" },
+    { name: "Berry & Bean", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Buchwalds", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Clever Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Coffee Collective", region: "Hovedstaden", city: "Copenhagen", website: "https://coffeecollective.dk" },
+    { name: "Copenhagen Coffee Lab", region: "Hovedstaden", city: "Copenhagen", website: "https://copenhagencoffeelab.com" },
+    { name: "Den Bæredygtige Bønne", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Depanneur", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Dynamo Kaffe", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Emo Fabrik", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Europa Kaffe og Te", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Farm Mountain", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "GarageRisteriet", region: "Syddanmark", city: "Odense", website: "" },
+    { name: "Hedekaffe", region: "Midtjylland", city: "Herning", website: "" },
+    { name: "Hipster Brew", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Holy Bean", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Ideal Kaffe", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Impact Roasters", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Just Coffee", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Kaffeagenterne", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Kaffedepartementet", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Kaffe Lars", region: "Midtjylland", city: "Viborg", website: "" },
+    { name: "Kafferist", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Kaffevaerk", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Kaffe Værkstedet", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Kama Kaffe", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Kama Lager", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Kontra Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "LA CABRA", region: "Midtjylland", city: "Aarhus", website: "https://www.lacabra.dk" },
+    { name: "Lagom Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Mokkahouse", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Mols Kafferisteri", region: "Midtjylland", city: "Ebeltoft", website: "" },
+    { name: "Nordhavn Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Nord Roastery", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Nordic Coffee House", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Nygaards Kaffe", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Odsherreds Kafferisteri", region: "Sjælland", city: "Odsherred", website: "" },
+    { name: "Original Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Prolog Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Risteriet", region: "Hovedstaden", city: "Copenhagen", website: "https://www.risteriet.dk" },
+    { name: "Roast Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Soze Kaffe og Risteri", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Stiller's Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Strandvejsristeriet", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Svendborg Kafferisteri", region: "Syddanmark", city: "Svendborg", website: "" },
+    { name: "Te & Kaffe specialisten", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Vendia Kaffe", region: "Nordjylland", city: "Vendsyssel", website: "" },
+    { name: "Wingreen Coffee", region: "Hovedstaden", city: "Copenhagen", website: "" },
+    { name: "Køge Kafferisteri", region: "Sjælland", city: "Køge", website: "" },
+    { name: "Mørk Kaffe", region: "Midtjylland", city: "Aarhus", website: "" },
+    { name: "Nørre Snede Kafferisteri", region: "Midtjylland", city: "Nørre Snede", website: "" }
+];
+
+// Region mapping for easier filtering
+const regionCities = {
+    "Nordjylland": ["Aalborg", "Vendsyssel", "Hjørring", "Frederikshavn"],
+    "Midtjylland": ["Aarhus", "Viborg", "Randers", "Herning", "Ebeltoft", "Nørre Snede"],
+    "Syddanmark": ["Odense", "Esbjerg", "Kolding", "Vejle", "Sønderborg", "Svendborg"],
+    "Sjælland": ["Roskilde", "Næstved", "Køge", "Odsherred"],
+    "Hovedstaden": ["Copenhagen", "Helsingør", "Hillerød"]
+};

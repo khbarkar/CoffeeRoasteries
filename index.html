@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danish Coffee Roastery Tracker</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+    <link rel="alternate icon" href="favicon.svg?v=2" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>☕ Danish Coffee Roastery Tracker</h1>
+            <p class="subtitle">Track your coffee journey across Denmark's finest roasteries</p>
+            <div class="stats">
+                <span id="visitedCount">Visited: 0/58</span>
+                <button id="exportBtn" class="export-btn">Export Database</button>
+                <button id="importBtn" class="import-btn">Import Database</button>
+                <input type="file" id="importFile" accept=".sqlite,.db" style="display: none;">
+            </div>
+        </header>
+
+        <div class="filters">
+            <label>
+                <input type="checkbox" id="filterVisited"> Show only visited
+            </label>
+            <label>
+                <input type="checkbox" id="filterStarred"> Show only starred
+            </label>
+            <input type="text" id="searchBox" placeholder="Search roasteries...">
+        </div>
+
+        <div id="roasteriesList" class="roasteries-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

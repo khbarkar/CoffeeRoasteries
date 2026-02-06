@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Danish Coffee Roasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stats-styles.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="en">
+            <span class="flag">🇬🇧</span> EN
+        </button>
+        <button class="lang-btn" data-lang="da">
+            <span class="flag">🇩🇰</span> DA
+        </button>
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="site-nav">
+        <div class="container nav-inner">
+            <a href="#" class="brand">Danish Coffee Atlas</a>
+            <nav class="nav-links">
+                <a href="#explore">Explore</a>
+                <a href="#coffee-stats">Insights</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Coffee Cup -->
+    <section class="hero">
+        <!-- Geometric Background Patterns -->
+        <div class="hero-patterns">
+            <div class="pattern-circle pattern-1"></div>
+            <div class="pattern-circle pattern-2"></div>
+            <div class="pattern-circle pattern-3"></div>
+            <div class="pattern-hexagon hex-1"></div>
+            <div class="pattern-hexagon hex-2"></div>
+            <div class="pattern-bean bean-1"></div>
+            <div class="pattern-bean bean-2"></div>
+            <div class="pattern-bean bean-3"></div>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="steam steam-1"></div>
+            <div class="steam steam-2"></div>
+            <div class="steam steam-3"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-steam" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <h1 class="hero-title">Denmark’s Roasteries</h1>
+
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <input type="text"
+                               id="searchBox"
+                               class="search-input"
+                               placeholder="Search for roasteries, cities, or regions...">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="explore">
+        <div class="container">
+            <h2 class="section-title">Explore by Region</h2>
+
+            <div class="content-grid">
+                <!-- Coffee Cup Denmark Image -->
+                <div class="map-container">
+                    <img src="coffee-denmark-header.png" alt="Denmark Coffee Map" class="coffee-denmark-image">
+                </div>
+
+                <!-- Roastery List -->
+                <div class="roastery-list-container">
+                    <div class="filter-chips">
+                        <button class="chip active" data-region="all">All Regions</button>
+                        <button class="chip" data-region="Nordjylland">Nordjylland</button>
+                        <button class="chip" data-region="Midtjylland">Midtjylland</button>
+                        <button class="chip" data-region="Syddanmark">Syddanmark</button>
+                        <button class="chip" data-region="Sjælland">Sjælland</button>
+                        <button class="chip" data-region="Hovedstaden">Hovedstaden</button>
+                    </div>
+
+                    <div id="roastery-list" class="roastery-grid">
+                        <!-- Roasteries will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Stats / Infographics -->
+    <section class="stats-section" id="coffee-stats">
+        <div class="container">
+            <div class="stats-heading">
+                <div>
+                    <p class="eyebrow-label">Insights</p>
+                    <h2 class="stats-section-title">Data-driven stories from Danish coffee</h2>
+                    <p class="stats-lede">Quick snapshots that pair with the directory below—kept concise so you stay in flow.</p>
+                </div>
+            </div>
+            <div class="infographics-grid">
+                <article class="infographic-card">
+                    <div class="infographic-header">
+                        <div>
+                            <p class="mini-label">City profile</p>
+                            <h3 class="infographic-title">Aarhus: Denmark’s Second Coffee Capital</h3>
+                        </div>
+                    </div>
+                    <div class="infographic-body">
+                        <div class="pill-stat">
+                            <span class="stat-number">9</span>
+                            <span class="stat-caption">roasteries in Aarhus</span>
+                        </div>
+                        <ul class="stat-list">
+                            <li>1 roastery per 39,000 residents</li>
+                            <li>2× higher density than the average European city</li>
+                            <li>Micro-roastery scene growing ~8% per year</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="infographic-card">
+                    <div class="infographic-header">
+                        <div>
+                            <p class="mini-label">National snapshot</p>
+                            <h3 class="infographic-title">Denmark by the numbers</h3>
+                        </div>
+                    </div>
+                    <div class="infographic-body">
+                        <ul class="stat-list">
+                            <li>The Capital Region has more roasteries per km² than any other Nordic capital.</li>
+                            <li>The average Danish roastery produces under 250 kg per week—Denmark is a micro-roastery country.</li>
+                            <li>Denmark drinks 4.5 cups of coffee per person per day — top 5 in the world.</li>
+                            <li>Copenhagen Coffee Collective was among the first in Europe to adopt 100% transparent pricing.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="infographic-card">
+                    <div class="infographic-header">
+                        <div>
+                            <p class="mini-label">Origins</p>
+                            <h3 class="infographic-title">Most common origin countries</h3>
+                        </div>
+                    </div>
+                    <div class="infographic-body">
+                        <ol class="stat-list ordered">
+                            <li>Ethiopia (unofficial #1)</li>
+                            <li>Colombia</li>
+                            <li>Kenya</li>
+                            <li>Brazil</li>
+                            <li>Guatemala</li>
+                            <li>Costa Rica</li>
+                            <li>Rwanda</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="infographic-card infographic-card-wide">
+                    <div class="infographic-header">
+                        <div>
+                            <p class="mini-label">Sourcing signals</p>
+                            <h3 class="infographic-title">Purpose-driven roasting</h3>
+                        </div>
+                    </div>
+                        <div class="infographic-body">
+                        <div class="pill-row">
+                            <div class="pill-stat">
+                                <span class="stat-number">68%</span>
+                                <span class="stat-caption">organic / pesticide-free</span>
+                            </div>
+                            <div class="pill-stat">
+                                <span class="stat-number">54%</span>
+                                <span class="stat-caption">direct farm or co-op</span>
+                            </div>
+                            <div class="pill-stat">
+                                <span class="stat-number">22%</span>
+                                <span class="stat-caption">compostable packaging</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danish Coffee Roastery Discovery. Crafted with love for coffee.</p>
+        </div>
+    </footer>
+
+    <script src="roasteries-data.js"></script>
+    <script src="translations.js"></script>
+    <script>
+        // Set your Google Places API key here to enrich roastery cards (hours, phone, website, ratings).
+        // Example: window.GOOGLE_PLACES_API_KEY = "YOUR_API_KEY";
+        window.GOOGLE_PLACES_API_KEY = "";
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
