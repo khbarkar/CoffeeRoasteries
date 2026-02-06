@@ -217,4 +217,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     el.addEventListener('input', () => renderAll(data));
     el.addEventListener('change', () => renderAll(data));
   });
+
+  // Starred stat link — click to filter to starred only
+  const starredLink = document.getElementById('stat-starred-link');
+  if (starredLink) {
+    starredLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const sortEl = document.getElementById('sort');
+      if (sortEl) {
+        sortEl.value = 'starred';
+      }
+      renderAll(data);
+      document.getElementById('roasteries-section')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 });
