@@ -200,10 +200,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderAll(data);
   renderMap(data);
 
-  const totalEl = document.getElementById('stat-total');
+  // Update stats in both locations
+  ['stat-total', 'stat-total-2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = roasteries.length;
+  });
   const starredEl = document.getElementById('stat-starred');
   const notesEl = document.getElementById('stat-notes');
-  if (totalEl) totalEl.textContent = roasteries.length;
   if (starredEl) starredEl.textContent = data.stars.length;
   if (notesEl) notesEl.textContent = Object.keys(data.notes).length;
 
