@@ -1,21 +1,5 @@
 import { roasteries } from './list.js';
 
-// City coordinates for Denmark map (approximate SVG positions)
-const cityCoords = {
-  "Copenhagen": { x: 310, y: 340 },
-  "Aarhus": { x: 215, y: 220 },
-  "Odense": { x: 215, y: 330 },
-  "Vejle": { x: 185, y: 280 },
-  "Sønderborg": { x: 190, y: 380 },
-  "Herning": { x: 155, y: 230 },
-  "Viborg": { x: 170, y: 190 },
-  "Ebeltoft": { x: 240, y: 210 },
-  "Svendborg": { x: 230, y: 360 },
-  "Odsherred": { x: 280, y: 290 },
-  "Køge": { x: 300, y: 320 },
-  "Vendsyssel": { x: 195, y: 100 },
-  "Nørre Snede": { x: 170, y: 255 }
-};
 
 async function loadData() {
   try {
@@ -130,69 +114,8 @@ function renderAll(data) {
   items.forEach(i => container.appendChild(createCard(i, i.comment, i.starred)));
 }
 
-function renderMap(data) {
-  const mapContainer = document.getElementById('denmark-map');
-  if (!mapContainer) return;
-
-  const cityCounts = {};
-  roasteries.forEach(r => {
-    cityCounts[r.city] = (cityCounts[r.city] || 0) + 1;
-  });
-
-  const cityStarred = {};
-  roasteries.forEach(r => {
-    if (data.stars.includes(r.name)) {
-      cityStarred[r.city] = true;
-    }
-  });
-
-  let dots = '';
-  for (const [city, coords] of Object.entries(cityCoords)) {
-    const count = cityCounts[city] || 0;
-    if (count === 0) continue;
-    const r = Math.min(4 + count * 1.2, 14);
-    const hasStarred = cityStarred[city];
-    const fill = hasStarred ? '#ffc107' : '#dc3545';
-    dots += `<circle cx="${coords.x}" cy="${coords.y}" r="${r}" fill="${fill}" opacity="0.85">
-      <title>${city}: ${count} roaster${count > 1 ? 'ies' : 'y'}</title>
-    </circle>`;
-    dots += `<text x="${coords.x}" y="${coords.y + r + 14}" text-anchor="middle" fill="#adb5bd" font-size="10" font-family="system-ui,sans-serif">${city}</text>`;
-  }
-
-  const denmarkPath = `M 175 60 L 195 55 L 210 70 L 205 90 L 215 100 L 210 120
-    L 200 130 L 195 150 L 185 165 L 175 175 L 165 190 L 155 210
-    L 145 230 L 140 250 L 135 265 L 140 280 L 150 290 L 160 300
-    L 170 315 L 175 330 L 180 345 L 185 360 L 190 375 L 185 390
-    L 175 395 L 165 385 L 155 370 L 150 355 L 145 340 L 140 325
-    L 130 310 L 125 295 L 120 280 L 115 265 L 120 250 L 125 235
-    L 130 220 L 135 205 L 140 190 L 145 175 L 150 160 L 155 145
-    L 160 130 L 165 115 L 170 100 L 175 85 Z`;
-
-  const zealandPath = `M 265 275 L 280 265 L 300 270 L 320 280 L 330 300
-    L 325 320 L 315 340 L 300 350 L 280 355 L 265 345
-    L 255 330 L 250 310 L 255 290 Z`;
-
-  const funenPath = `M 200 310 L 215 305 L 230 315 L 235 335
-    L 230 355 L 215 365 L 200 360 L 195 340 L 195 325 Z`;
-
-  const lollandPath = `M 275 370 L 310 365 L 325 375 L 315 385 L 280 385 Z`;
-  const bornholmPath = `M 370 280 L 385 275 L 390 290 L 380 300 L 370 295 Z`;
-
-  // Using Bootstrap colors: #495057 for land, #6c757d for stroke
-  mapContainer.innerHTML = `
-    <svg viewBox="60 30 370 400" xmlns="http://www.w3.org/2000/svg" class="mx-auto d-block w-100" style="max-width:500px">
-      <path d="${denmarkPath}" fill="#495057" stroke="#6c757d" stroke-width="1.5" />
-      <path d="${zealandPath}" fill="#495057" stroke="#6c757d" stroke-width="1.5" />
-      <path d="${funenPath}" fill="#495057" stroke="#6c757d" stroke-width="1.5" />
-      <path d="${lollandPath}" fill="#495057" stroke="#6c757d" stroke-width="1.5" />
-      <path d="${bornholmPath}" fill="#495057" stroke="#6c757d" stroke-width="1.5" />
-      ${dots}
-    </svg>
-    <div class="d-flex justify-content-center gap-4 mt-3 flex-wrap">
-      <span class="d-flex align-items-center gap-1 small text-white-50"><span class="badge bg-danger rounded-circle p-1">&nbsp;</span> Roastery city</span>
-      <span class="d-flex align-items-center gap-1 small text-white-50"><span class="badge bg-warning rounded-circle p-1">&nbsp;</span> Has starred roastery</span>
-      <span class="small text-white-50 fst-italic">Dot size = number of roasteries</span>
-    </div>`;
+function renderMap() {
+  // Map is a static PNG image — replace denmark-map.png in the docs/ folder
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
