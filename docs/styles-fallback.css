@@ -1,0 +1,26 @@
+/* Minimal fallback styles to preserve layout when CDN is unavailable */
+:root{--bs-body-bg:#fff;--bs-body-color:#212529;--bs-light:#f8f9fa}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+.container{width:100%;max-width:960px;margin-left:auto;margin-right:auto;padding:0 1rem}
+.navbar{display:flex;align-items:center;padding:.5rem 0;background:var(--bs-light);border-bottom:1px solid #e9ecef}
+.navbar .container{display:flex}
+.navbar-brand{font-weight:600;color:#000;text-decoration:none}
+main.container{padding-top:1rem;padding-bottom:2rem}
+h1{font-size:1.75rem;margin:.5rem 0}
+.mt-4{margin-top:1.5rem}
+.mt-3{margin-top:1rem}
+.text-center{text-align:center}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.text-muted{color:#6c757d}
+.small{font-size:.875em}
+.note-instructions{color:#495057}
+.card{border:1px solid #dee2e6;border-radius:.375rem;padding:1rem;margin-bottom:.75rem;background:#fff}
+.card .card-title{font-weight:600;margin:0 0 .25rem}
+.card .card-body{padding:1rem}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;border-bottom:1px solid #e9ecef;background:transparent}
+.star-btn{background:transparent;border:none;font-size:1.25rem;cursor:pointer}
+.btn{display:inline-block;padding:.375rem .75rem;border-radius:.375rem;border:1px solid #6c757d;background:#e9ecef;color:#000;text-decoration:none;cursor:pointer}
+.btn-outline-primary{background:transparent;border-color:#0d6efd;color:#0d6efd}
+.star{font-size:1.25rem;color:gold}
+.row{display:flex;flex-wrap:wrap;margin-left:-.5rem;margin-right:-.5rem}
+.col{flex:1;padding:.5rem}
