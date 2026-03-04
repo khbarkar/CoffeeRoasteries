@@ -1,121 +1,90 @@
-import { roasteries } from './list.js';
-
-// City positions as percentage of the map image (x%, y%)
-const cityPositions = {
-  "Copenhagen": { x: 76, y: 60 },
-  "Aarhus": { x: 52, y: 42 },
-  "Odense": { x: 50, y: 62 },
-  "Vejle": { x: 43, y: 52 },
-  "Sønderborg": { x: 47, y: 74 },
-  "Herning": { x: 36, y: 46 },
-  "Viborg": { x: 40, y: 37 },
-  "Ebeltoft": { x: 56, y: 40 },
-  "Svendborg": { x: 53, y: 68 },
-  "Odsherred": { x: 64, y: 51 },
-  "Køge": { x: 72, y: 58 },
-  "Vendsyssel": { x: 44, y: 17 },
-  "Nørre Snede": { x: 38, y: 49 }
-};
+let allRoasteries = [];
 
 async function loadData() {
   try {
-    const res = await fetch('comments.json');
-    if (!res.ok) return { notes: {}, stars: [] };
-    const data = await res.json();
-    return { notes: data.notes || {}, stars: data.stars || [] };
+    const res = await fetch('data.json');
+    if (!res.ok) return [];
+    return await res.json();
   } catch (e) {
-    return { notes: {}, stars: [] };
+    return [];
   }
 }
 
-function createCard(roastery, comment, starred) {
-  const { name, city, website } = roastery;
-  const col = document.createElement('div');
-  col.className = 'col';
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
 
+function createCard(r) {
   const card = document.createElement('div');
-  card.className = 'card h-100 overflow-hidden';
+  card.className = 'roastery-card' + (r.purchased ? ' visited' : '') + (r.starred ? ' starred' : '');
 
-  // Header - dark bg
-  const header = document.createElement('div');
-  header.className = 'card-header bg-dark text-white d-flex align-items-center justify-content-between border-0';
+  let headerHtml = `
+    <div class="roastery-card-header">
+      <div class="roastery-card-title">
+        ${r.purchased ? '<span class="roastery-card-check"><i class="bi bi-check-circle-fill"></i></span>' : ''}
+        <span class="roastery-card-name">${escapeHtml(r.name)}</span>
+        ${r.starred ? '<span class="roastery-card-star"><i class="bi bi-star-fill"></i></span>' : ''}
+      </div>
+      ${r.website ? `<a href="${escapeHtml(r.website)}" target="_blank" rel="noopener noreferrer" class="roastery-card-link" title="Visit website"><i class="bi bi-box-arrow-up-right"></i></a>` : ''}
+    </div>
+  `;
 
-  const titleWrap = document.createElement('div');
-  titleWrap.className = 'd-flex align-items-center gap-2';
+  let bodyParts = [];
 
-  const title = document.createElement('span');
-  title.className = 'fw-semibold small';
-  title.textContent = name;
-  titleWrap.appendChild(title);
+  // Badges
+  let badges = '';
+  if (r.purchased) {
+    badges += '<span class="roastery-card-badge badge-purchased"><i class="bi bi-bag-check-fill"></i> Purchased</span>';
+  } else {
+    badges += '<span class="roastery-card-badge badge-not-purchased">Not yet</span>';
+  }
+  if (r.starred) {
+    badges += '<span class="roastery-card-badge badge-starred"><i class="bi bi-star-fill"></i> Favourite</span>';
+  }
+  bodyParts.push(`<div>${badges}</div>`);
 
-  if (starred) {
-    const star = document.createElement('span');
-    star.className = 'small';
-    star.textContent = '⭐';
-    star.title = 'Starred';
-    titleWrap.appendChild(star);
+  if (r.region) {
+    bodyParts.push(`<div class="roastery-card-city"><i class="bi bi-geo-alt-fill"></i> ${escapeHtml(r.region)}</div>`);
   }
 
-  header.appendChild(titleWrap);
-
-  if (website) {
-    const link = document.createElement('a');
-    link.href = website;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.className = 'link-light text-decoration-none';
-    link.title = 'Visit website';
-    link.innerHTML = '<i class="bi bi-box-arrow-up-right"></i>';
-    header.appendChild(link);
+  if (r.comment) {
+    const formatted = escapeHtml(r.comment).replace(/\n/g, '<br>');
+    bodyParts.push(`<div class="roastery-card-note">${formatted}</div>`);
   }
 
-  // Body - light bg
-  const body = document.createElement('div');
-  body.className = 'card-body bg-white';
-
-  const cityEl = document.createElement('div');
-  cityEl.className = 'small text-secondary';
-  cityEl.innerHTML = '<i class="bi bi-geo-alt text-danger"></i> ' + city;
-  body.appendChild(cityEl);
-
-  if (comment) {
-    const p = document.createElement('p');
-    p.className = 'card-text small text-muted mb-0 mt-2';
-    p.textContent = comment;
-    body.appendChild(p);
+  if (r.website) {
+    const clean = r.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+    bodyParts.push(`<a href="${escapeHtml(r.website)}" target="_blank" rel="noopener noreferrer" class="roastery-card-url"><i class="bi bi-link-45deg"></i> ${escapeHtml(clean)}</a>`);
   }
 
-  if (website) {
-    const urlEl = document.createElement('a');
-    urlEl.href = website;
-    urlEl.target = '_blank';
-    urlEl.rel = 'noopener noreferrer';
-    urlEl.className = 'd-block small link-primary text-decoration-none mt-2';
-    urlEl.textContent = website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
-    body.appendChild(urlEl);
+  if (r.has_espresso) {
+    bodyParts.push('<div class="roastery-card-skip"><i class="bi bi-x-circle"></i> No espresso</div>');
   }
 
-  card.appendChild(header);
-  card.appendChild(body);
-  col.appendChild(card);
-  return col;
+  card.innerHTML = headerHtml + `<div class="roastery-card-body">${bodyParts.join('')}</div>`;
+  return card;
 }
 
-function renderAll(data) {
+function renderAll() {
   const container = document.getElementById('roasteries');
-  const q = document.getElementById('search')?.value?.toLowerCase?.() || '';
-  const sort = document.getElementById('sort')?.value || 'alpha';
+  if (!container) return;
 
-  let items = roasteries.map(r => ({
-    ...r,
-    comment: data.notes[r.name] || '',
-    starred: data.stars.includes(r.name)
-  }));
+  const q = (document.getElementById('search')?.value || '').toLowerCase();
+  const sort = document.getElementById('sort')?.value || 'alpha';
+  const filterPurchased = document.getElementById('filterPurchased')?.checked || false;
+  const filterStarred = document.getElementById('filterStarred')?.checked || false;
+
+  let items = [...allRoasteries];
+
+  if (filterPurchased) items = items.filter(i => i.purchased);
+  if (filterStarred) items = items.filter(i => i.starred);
 
   if (q) {
     items = items.filter(i =>
       i.name.toLowerCase().includes(q) ||
-      i.city.toLowerCase().includes(q) ||
+      (i.region && i.region.toLowerCase().includes(q)) ||
       (i.comment && i.comment.toLowerCase().includes(q))
     );
   }
@@ -127,87 +96,65 @@ function renderAll(data) {
   }
 
   container.innerHTML = '';
-  items.forEach(i => container.appendChild(createCard(i, i.comment, i.starred)));
+  items.forEach(r => container.appendChild(createCard(r)));
+
+  // Update counter
+  const counter = document.getElementById('roastery-counter');
+  const purchased = allRoasteries.filter(r => r.purchased).length;
+  if (counter) {
+    counter.textContent = `Showing ${items.length} of ${allRoasteries.length} \u00B7 ${purchased} purchased`;
+  }
 }
 
-function renderMap(data) {
-  const container = document.getElementById('map-markers');
-  if (!container) return;
+function initNav() {
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+}
 
-  // Count roasteries per city
-  const cityCounts = {};
-  roasteries.forEach(r => {
-    cityCounts[r.city] = (cityCounts[r.city] || 0) + 1;
+function initMobileMenu() {
+  const btn = document.getElementById('nav-more-btn');
+  const menu = document.getElementById('mobile-menu');
+  const close = document.getElementById('mobile-menu-close');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', () => menu.classList.add('open'));
+  close.addEventListener('click', () => menu.classList.remove('open'));
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => menu.classList.remove('open'));
   });
-
-  // Check which cities have starred roasteries
-  const cityStarred = {};
-  roasteries.forEach(r => {
-    if (data.stars.includes(r.name)) {
-      cityStarred[r.city] = true;
-    }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') menu.classList.remove('open');
   });
+}
 
-  container.innerHTML = '';
-  for (const [city, pos] of Object.entries(cityPositions)) {
-    const count = cityCounts[city] || 0;
-    if (count === 0) continue;
-
-    const size = Math.min(10 + count * 2, 28);
-    const hasStarred = cityStarred[city];
-    const bg = hasStarred ? '#ffc107' : '#1D809F';
-
-    // Dot
-    const dot = document.createElement('span');
-    dot.className = 'position-absolute rounded-circle d-flex align-items-center justify-content-center';
-    dot.title = `${city}: ${count} roaster${count > 1 ? 'ies' : 'y'}`;
-    dot.style.cssText = `left:${pos.x}%;top:${pos.y}%;width:${size}px;height:${size}px;background:${bg};transform:translate(-50%,-50%);cursor:default;border:2px solid #fff;font-size:9px;color:#fff;font-weight:700;`;
-    if (count > 1) dot.textContent = count;
-    container.appendChild(dot);
-
-    // Label
-    const label = document.createElement('span');
-    label.className = 'position-absolute small fw-semibold text-dark';
-    label.style.cssText = `left:${pos.x}%;top:calc(${pos.y}% + ${size / 2 + 4}px);transform:translateX(-50%);font-size:10px;white-space:nowrap;`;
-    label.textContent = city;
-    container.appendChild(label);
-  }
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const data = await loadData();
-  renderAll(data);
-  renderMap(data);
+  allRoasteries = await loadData();
 
-  // Update stats in both locations
-  ['stat-total', 'stat-total-2'].forEach(id => {
+  renderAll();
+
+  initNav();
+  initMobileMenu();
+  initSmoothScroll();
+
+  // Update counts
+  const el = document.getElementById('stat-total-2');
+  if (el) el.textContent = allRoasteries.length;
+
+  // All filter/sort controls
+  ['search', 'sort', 'filterPurchased', 'filterStarred'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.textContent = roasteries.length;
-  });
-  const starredEl = document.getElementById('stat-starred');
-  const notesEl = document.getElementById('stat-notes');
-  if (starredEl) starredEl.textContent = data.stars.length;
-  if (notesEl) notesEl.textContent = Object.keys(data.notes).length;
-
-  const search = document.getElementById('search');
-  const sort = document.getElementById('sort');
-  [search, sort].forEach(el => {
     if (!el) return;
-    el.addEventListener('input', () => renderAll(data));
-    el.addEventListener('change', () => renderAll(data));
+    el.addEventListener('input', renderAll);
+    el.addEventListener('change', renderAll);
   });
-
-  // Starred stat link — click to filter to starred only
-  const starredLink = document.getElementById('stat-starred-link');
-  if (starredLink) {
-    starredLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      const sortEl = document.getElementById('sort');
-      if (sortEl) {
-        sortEl.value = 'starred';
-      }
-      renderAll(data);
-      document.getElementById('roasteries-section')?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
 });

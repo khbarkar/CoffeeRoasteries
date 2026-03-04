@@ -1,0 +1,497 @@
+[
+  {
+    "name": "Aekvator kaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "Espresso Equador 250gr. Bought in store in Nyborg. I think it was old when I bought it, beans very dry and tasteless. I ended up using the beans in my plants to deter gnats.\n\nWas going to buy online but they only accept dankort or bank transfer, not even mobile pay. I really cannot be bothered.",
+    "website": "https://www.aekvatorkaffe.dk",
+    "region": "Vejle, Jylland",
+    "starred": 0
+  },
+  {
+    "name": "Als Risteri",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Als espresso \"full city roast\"  220gr  \n",
+    "website": "https://alsristeri.dk/",
+    "region": "Sønderborg, Jylland",
+    "starred": 0
+  },
+  {
+    "name": "Amokka",
+    "purchased": 1,
+    "has_espresso": 1,
+    "comment": "Cant find espresso ",
+    "website": "https://amokka.com/en/collections/coffee",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Andersen & Maillard",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Lalesa Black Honey 250gr . Perfect taste. Loved this",
+    "website": "https://www.andersenmaillard.dk",
+    "region": "Copenhagen, Sjælland",
+    "starred": 1
+  },
+  {
+    "name": "April Coffee Roasters",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "They have insanley expensive options 600kr for 125gr.. \n250gr decaf  \n250gr House blend keneya   \n",
+    "website": "https://www.aprilcoffeeroasters.com",
+    "region": "Copenhagen, Sjælland",
+    "starred": 0
+  },
+  {
+    "name": "Berry & Bean",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.berrybean.dk/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Brændeholm Risteri",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "Planning to try YIRGACHEFFE ethiopia, supposedto be better than Sidamo",
+    "website": "https://braendeholmristeri.dk",
+    "region": "Faaborg, Fyn",
+    "starred": 0
+  },
+  {
+    "name": "Buchwalds",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Espresso blend , 250gr ",
+    "website": "https://buchwalds.dk",
+    "region": "Bornholm",
+    "starred": 0
+  },
+  {
+    "name": "Clever Coffee",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Kindeng - Papua Ny Guinea , 250gr  Insanely good",
+    "website": "https://clevercoffee.dk/",
+    "region": "Odder, Jylland",
+    "starred": 1
+  },
+  {
+    "name": "Coffee Collective",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Subscription have gotten I think 10 different kinds \n",
+    "website": "https://coffeecollective.dk",
+    "region": "Copenhagen, Sjælland",
+    "starred": 1
+  },
+  {
+    "name": "Colombani",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.colombani.dk/",
+    "region": "Ebeltoft, Jylland",
+    "starred": 0
+  },
+  {
+    "name": "Copenhagen Coffee Lab",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "3 bags   Espresso Tasting Pack\n",
+    "website": "https://copenhagencoffeelab.com",
+    "region": "Copenhagen, Sjælland",
+    "starred": 0
+  },
+  {
+    "name": "Emo Fabrik",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Espresso Honduras Øko Specialty Coffee - Comsa - 250 g - 129kr\nPeru Øko Specialty Coffee - 250 g ",
+    "website": "https://emofabrik.dk/",
+    "region": "Aarhus, Jylland",
+    "starred": 0
+  },
+  {
+    "name": "Europa Kaffe og Te",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Goma – En sødmefuld nyhøstet kaffe fra Etiopien 250gr ",
+    "website": "https://europakaffeogte.dk/shop/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "GarageRisteriet",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://garageristeriet.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Hedekaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.hedekaffe.dk/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Hipster Brew",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://hipsterbrew.com/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Holy Bean",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Costa Rica Tres milagros 125kr 250gr . The costa rica is fabulous\nEtiopien Suke Quto  120kr 250gr\n+shipment 69kr\n",
+    "website": "https://holybean.dk/",
+    "region": "Aarup, Fyn",
+    "starred": 1
+  },
+  {
+    "name": "Ideal Kaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://idealkaffe.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Impact Roasters",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://impactroasters.dk/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Just Coffee",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Espresso Slowdown koffeinfri  250gr 92kr +shipment 35kr . Really good decaf. Ended up buying an extra kilo.\nNote, I love their Ethiopian Natural and put trying new roasteries on hold for a while just to have that coffee for a month.   ",
+    "website": "https://www.justcoffee.dk",
+    "region": "Roskilde, Sjælland",
+    "starred": 1
+  },
+  {
+    "name": "Kaffe Lars",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Ethiopia, Sidamo 500gr - not possible to buy smaller :( 150kr + skipment 49kr\n",
+    "website": "https://kaffelars.dk",
+    "region": "Odense, Fyn",
+    "starred": 0
+  },
+  {
+    "name": "Kaffe Værkstedet",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://kaffevaerkstedet.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Kaffeagenterne",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://kaffeagenterne.dk/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Kaffedepartementet",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.kaffedep.com",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Kafferist",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://kafferist.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Kaffevaerket",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "They don't have an online store, Have to go to the coffee shop to buy their coffee.",
+    "website": "https://kaffevaerket.dk",
+    "region": "Odense, Fyn",
+    "starred": 0
+  },
+  {
+    "name": "Kama Kaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://kamakaffe.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Kama Lager",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.kamalager.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Kontra Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.kontracoffee.com",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Køge Kafferisteri",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "NICARAGUA Limited Edition  × 1\nMængde:\n250 Gram",
+    "website": "https://koegekafferisteri.dk",
+    "region": "Koge, Sjælland",
+    "starred": 0
+  },
+  {
+    "name": "LA CABRA",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Jorge Vásquez 250gr 169kr\n+shipment 29kr",
+    "website": "https://lacabra.com",
+    "region": "",
+    "starred": 1
+  },
+  {
+    "name": "Lagom Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://lagomcoffee.com",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Mokkahouse",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://mokkahouse.dk/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Mols Kafferisteri",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Mørk Kaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://moerkkaffe.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Nord Roastery",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://nord-roastery.com",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Nordhavn Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://nordhavncoffee.com/",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Nordic Coffee House",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://nordiccoffeehouse.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Nygaards Kaffe",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Etiopisk Sidamo Økologisk 250gr 95kr\n+shipment 49kr \nCame vacuum packed wiht a little dark sugar candy . Perfect coffee, loved the silky texture and taste",
+    "website": "https://dengyldneloeve.dk/kat/the-og-kaffe/kaffe/",
+    "region": "",
+    "starred": 1
+  },
+  {
+    "name": "Nørre Snede Kafferisteri",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Koffeinfri Peru - økologiskv200g 69 DKK\nMonsooned Malabar INDIA 200G 69 DKK\n + shipment 49kr",
+    "website": "https://www.noerresnedekafferisteri.dk",
+    "region": "Herning , Jylland",
+    "starred": 0
+  },
+  {
+    "name": "Odsherreds Kafferisteri",
+    "purchased": 1,
+    "has_espresso": 1,
+    "comment": "",
+    "website": "https://www.odsherredskafferisteri.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Original Coffee",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Bought in café in Copenhagen",
+    "website": "https://originalcoffee.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Prolog Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.prologcoffee.com",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Risteriet",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Daily espresso 250gr 88kr \n+shipment 49kr",
+    "website": "https://www.risteriet.dk",
+    "region": "Glostrup, Sjælland",
+    "starred": 0
+  },
+  {
+    "name": "Roast Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://roast.com",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Soze Kaffe og Risteri",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://www.sozekaffe.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Stiller's Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://stillerscoffee.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Strandvejsristeriet",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Espresso Velo\nEspressoblend med Guatemala, Huehuetenango, og vores brasilianske arabica kaffe fra Fazenda Rainha, som er af sorten yellow bourbon, og en pulped natural kaffe med en stor naturlig sødme, når den er ristet korrekt.\nHertil en portion Etiopien, Sidamo som ikke er vasket, men natural processeret på farmen Nefas og giver elegant sødme og tyngde til blandingen. For at give frugt og fylde er der til slut iblandet lidt økologisk Honduras fra Capucas.",
+    "website": "https://www.strandvejsristeriet.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Svendborg Kafferisteri",
+    "purchased": 1,
+    "has_espresso": 0,
+    "comment": "Decaf Arbica 250g \nBought in store , the coffeee was pretty stale and old. \nCan't reallly compete with coffeees directly from the roasteries that are fresh. ",
+    "website": "https://kaerspecialiteter.dk/svendborg-kafferisteri/",
+    "region": "Svendborg, Fyn",
+    "starred": 0
+  },
+  {
+    "name": "Te & Kaffe salonen",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://teogkaffesalonen.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Te & Kaffe specialisten",
+    "purchased": 1,
+    "has_espresso": 1,
+    "comment": "Kaffe med julet smag 225g \nBought in store. Not good for espresso even if store attendant assured it was fine for espresso. Got a watery cinnamon tasting sewer water out of this. \nPerfectly fine for french press. \nIts not possible to purchase over the website. Need to find in a store somewhere. Not sure I can be bothered",
+    "website": "https://www.teogkaffespecialisten.dk",
+    "region": "Karlslunde, Sjælland",
+    "starred": 0
+  },
+  {
+    "name": "Vendia Kaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://vendiakaffe.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Wingreen Coffee",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "",
+    "website": "https://wiingreencoffee.dk",
+    "region": "",
+    "starred": 0
+  },
+  {
+    "name": "Winthers Kaffe",
+    "purchased": 0,
+    "has_espresso": 0,
+    "comment": "Can´t see on the website where the roastery is. The shop is in Odense and they claim their coffeee is freshly roasted. ",
+    "website": "https://wintherskaffe.dk/",
+    "region": "Odense, Fyn",
+    "starred": 0
+  }
+]

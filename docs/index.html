@@ -1,142 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Danish Coffee - Tried</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;700&display=swap" rel="stylesheet">
-  </head>
-  <body id="page-top" class="bg-dark" style="font-family:'Source Sans 3',sans-serif">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danish Coffee Roasteries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Menu Toggle Button (fixed top-right like stylish-portfolio) -->
-    <button class="btn btn-dark position-fixed top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center shadow" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarNav" style="width:50px;height:50px;z-index:1050;background:rgba(52,58,64,.5)">
-      <i class="bi bi-list fs-4 text-white"></i>
+  <!-- Navigation -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-left">
+      <a href="#roasteries-section" class="nav-pill">Roasteries</a>
+      <a href="#blog" class="nav-pill">Blog</a>
+      <a href="#about" class="nav-pill">About</a>
+      <button class="nav-pill nav-more" id="nav-more-btn" aria-label="More">
+        <i class="bi bi-three-dots"></i>
+      </button>
+    </div>
+    <div class="nav-center">
+      <a href="#" class="nav-logo">
+        <span class="logo-main">DK Coffee</span>
+        <span class="logo-sub">Danish Roasteries</span>
+      </a>
+    </div>
+    <div class="nav-right"></div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">
+      <i class="bi bi-x-lg"></i>
     </button>
+    <nav class="mobile-menu-nav">
+      <a href="#roasteries-section">Roasteries</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
 
-    <!-- Sidebar Navigation (offcanvas from right) -->
-    <div class="offcanvas offcanvas-end text-white" tabindex="-1" id="sidebarNav" style="background:#1D809F;width:250px">
-      <div class="offcanvas-header border-bottom border-white border-opacity-10">
-        <h5 class="offcanvas-title fw-bold">Danish Coffee</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">
+          <span class="hero-line">I TESTED</span>
+          <span class="hero-line">ESPRESSO  .</span>
+          <span class="hero-line hero-accent">BEANS</span>
+        </h1>
+        <!-- Polaroid photo pinned over the text -->
+        <div class="hero-polaroid" aria-hidden="true">
+          <div class="hero-pin"></div>
+          <img src="polaroid.png" alt="">
+        </div>
       </div>
-      <div class="offcanvas-body p-0">
-        <nav class="nav flex-column">
-          <a class="nav-link text-white py-3 px-4" href="#page-top" data-bs-dismiss="offcanvas">Home</a>
-          <a class="nav-link text-white py-3 px-4" href="#about" data-bs-dismiss="offcanvas">About</a>
-          <a class="nav-link text-white py-3 px-4" href="#services" data-bs-dismiss="offcanvas">Features</a>
-          <a class="nav-link text-white py-3 px-4" href="#roasteries-section" data-bs-dismiss="offcanvas">Roasteries</a>
-          <a class="nav-link text-white py-3 px-4" href="#map" data-bs-dismiss="offcanvas">Map</a>
-        </nav>
+      <p class="hero-subtitle">In Denmark, So you don't have to.
+      </p>
+      <a href="#roasteries-section" class="hero-btn">
+        <span>Explore Roasteries</span>
+        <span class="hero-btn-icon"><i class="bi bi-cup-hot-fill"></i></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Marquee banner -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Copenhagen</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Aarhus</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Odense</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Vejle</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Herning</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Viborg</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Svendborg</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Ebeltoft</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Køge</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Sønderborg</span>
+      <span class="marquee-dot"></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item">Copenhagen</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Aarhus</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Odense</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Vejle</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Herning</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Viborg</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Svendborg</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Ebeltoft</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Køge</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Sønderborg</span>
+      <span class="marquee-dot"></span>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Blog</span>
+        <h2 class="section-title">Coffee Talks</h2>
+      </div>
+      <article class="blog-post-full">
+        <div class="blog-post-hero">
+          <img src="coffemaking.png" alt="From cherry to cup — the coffee making process" loading="lazy">
+        </div>
+        <div class="blog-post-content">
+          <span class="blog-post-date">March 2026</span>
+          <h3 class="blog-post-title">Finding Coffee Roasteries in Denmark</h3>
+
+          <p>In 2024 I was given a gift card to an espresso-making course as a present. Now, I have always been passionate about coffee, but I had stuck to the big brands up until I took that course.</p>
+
+          <p>What I found there was a whole new flavour profile of espresso. And truly, I actually thought that French roast (essentially fancy coffee speak for "burned to a crisp") was an acceptable and good flavour of coffee. But having had freshly roasted beans from <a href="https://coffeecollective.dk" target="_blank" rel="noopener noreferrer">Coffee Collective</a> in Aarhus, there was no turning back.</p>
+
+          <p>First I got a subscription of espresso from Coffee Collective, which was great. But then I started looking for other coffee roasters in Denmark and discovered that there are well over 50 independent roasteries &mdash; in this little collection of islands that hosts some 6 million people.</p>
+
+          <p>Obviously I had to set off on a path and try them all. So I dug up all the online roasteries I could find and set off to purchase at least one bag of coffee from each one.</p>
+
+          <h4>My demands were simple:</h4>
+          <ul>
+            <li>It has to be espresso</li>
+            <li>Payment has to be possible via Apple Pay or MobilePay (my money, my rules)</li>
+            <li>I want the beans whole, to grind myself</li>
+          </ul>
+
+          <p>That's it.</p>
+
+          <p>Now, as for the flavours &mdash; the test here is made by a factor of n=1. I have no science behind what I liked or didn't like. It's just one person's opinion.</p>
+
+          <p>My coffee machine is a <strong>Sage Barista Pro</strong>.</p>
+
+          <p>I live in Fyn and we have extremely hard water. I have a softener filter and clean my machine regularly, but water quality greatly affects coffee flavour. What tastes not so great in my case may be amazing at someone else's.</p>
+
+          <p>Grinding settings on beans is almost black magic. I try to find the perfect grind for each bag I get. But I refuse to throw away a coffee that may not have the perfect setting &mdash; I will drink the coffee anyway and adjust for the next cup. This is hardly the professional way. But for 130 or so DKK for 250g of beans, I am drinking every single drop, even if it should taste like battery acid due to my hard water and poor grinding setting.</p>
+
+          <p>I have purchased coffee from about half of the places on my list now, some 6 months after I started this project.</p>
+
+          <p>Every single roastery so far has had outstanding service. I get everything from a little written smile on the receipt to a small caramel or coffee sticker. Frankly, I have never received such good service purchasing a kilo of Lavazza in a regular store.</p>
+
+          <p>I have a little star on the places that I personally loved the most. It may very well be that I simply never found the correct setting for the others that I didn't star, and ruined the coffee. We will never know.</p>
+
+          <p>I stand by my choices and will update as I continue to find more roasteries.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Roasteries Section -->
+  <section class="roasteries-section" id="roasteries-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Roasteries</h2>
+      </div>
+      <div class="filter-bar">
+        <div class="filter-search">
+          <i class="bi bi-search"></i>
+          <input id="search" type="text" placeholder="Filter by name, city, or note...">
+        </div>
+        <select id="sort" class="filter-sort">
+          <option value="alpha">A &rarr; Z</option>
+          <option value="starred">Starred First</option>
+        </select>
+      </div>
+      <div class="filter-toggles">
+        <label class="filter-toggle">
+          <input type="checkbox" id="filterPurchased">
+          <span>Purchased only</span>
+        </label>
+        <label class="filter-toggle">
+          <input type="checkbox" id="filterStarred">
+          <span>Starred only</span>
+        </label>
+        <span class="filter-counter" id="roastery-counter"></span>
+      </div>
+      <div id="roasteries" class="roasteries-grid"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="about-title">Built for coffee lovers</h2>
+        <p class="about-text">
+          A simple tracker for Danish coffee roasteries.
+          Browse the collection, see tasting notes, and discover your next favourite roast.
+        </p>
+        <p class="about-text about-muted">
+          Built for GitHub Pages &mdash; serve the <code>docs/</code> folder.
+        </p>
       </div>
     </div>
+  </section>
 
-    <!-- Masthead / Header -->
-    <header class="bg-dark d-flex align-items-center text-center text-white" style="min-height:100vh;padding:8rem 0">
-      <div class="container px-4 px-lg-5">
-        <h1 class="display-3 fw-bold mb-2">Danish Coffee</h1>
-        <h3 class="mb-5 fw-light fst-italic text-white-50">A Tracker for Danish Roasteries</h3>
-        <a class="btn btn-primary btn-lg px-5 py-3" href="#about">Find Out More</a>
-      </div>
-    </header>
-
-    <!-- About -->
-    <section class="bg-light py-5" id="about">
-      <div class="container px-4 px-lg-5 text-center py-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h2 class="display-6 fw-bold">Track your favourite Danish coffee roasteries!</h2>
-            <p class="lead text-muted mb-5">
-              Browse <span id="stat-total" class="fw-bold">59</span> roasteries across Denmark.
-              Star your favourites, add tasting notes, and explore them on the map.
-            </p>
-          </div>
+  <!-- Stories Section (bottom) -->
+  <section class="stories-section" id="stories">
+    <div class="container">
+      <span class="section-tag">Stories</span>
+      <div class="stories-card">
+        <div class="stories-image">
+          <img src="denmark-map.png" alt="Map of Denmark" loading="lazy">
+        </div>
+        <div class="stories-body">
+          <h2 class="stories-title">Inside the World of Danish Coffee</h2>
+          <p class="stories-text">
+            Denmark's coffee scene is one of Europe's most exciting. From specialty micro-roasters
+            in Copenhagen to hidden gems in Jutland, Danish roasters are pushing boundaries with
+            single-origin beans, sustainable sourcing, and innovative roast profiles. This tracker
+            covers <strong id="stat-total-2">59</strong> roasteries across the country.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- At a Glance -->
-    <section class="text-white text-center py-5" id="services" style="background:#1D809F">
-      <div class="container px-4 px-lg-5 py-5">
-        <h3 class="text-warning text-uppercase small mb-0" style="letter-spacing:2px">At a Glance</h3>
-        <h2 class="display-6 fw-bold mb-5">Your Coffee Dashboard</h2>
-
-        <!-- Stats row -->
-        <div class="row g-4 justify-content-center">
-          <div class="col-4 col-md-4">
-            <div class="display-5 fw-bold" id="stat-total-2">59</div>
-            <div class="small text-uppercase text-white-50 mt-1" style="letter-spacing:1px">Roasteries</div>
-          </div>
-          <div class="col-4 col-md-4">
-            <a href="#roasteries-section" id="stat-starred-link" class="text-decoration-none text-white d-block">
-              <div class="display-5 fw-bold" id="stat-starred">0</div>
-              <div class="small text-uppercase text-white-50 mt-1" style="letter-spacing:1px">Starred <i class="bi bi-arrow-right-circle"></i></div>
-            </a>
-          </div>
-          <div class="col-4 col-md-4">
-            <div class="display-5 fw-bold" id="stat-notes">0</div>
-            <div class="small text-uppercase text-white-50 mt-1" style="letter-spacing:1px">With Notes</div>
-          </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">DK Coffee</span>
+          <span class="footer-tagline">Danish Roasteries</span>
         </div>
+        <a href="#hero" class="footer-top-btn" aria-label="Back to top">
+          <i class="bi bi-arrow-up"></i>
+        </a>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- Roasteries Filter + Grid -->
-    <section class="bg-light py-5" id="roasteries-section">
-      <div class="container px-4 px-lg-5">
-        <div class="text-center mb-4">
-          <h3 class="text-secondary text-uppercase small mb-0" style="letter-spacing:2px">Portfolio</h3>
-          <h2 class="display-6 fw-bold mb-4">Roasteries</h2>
-        </div>
-        <div class="row justify-content-center mb-4">
-          <div class="col-lg-8">
-            <div class="input-group mb-2">
-              <span class="input-group-text bg-dark text-white border-dark"><i class="bi bi-search"></i></span>
-              <input id="search" class="form-control" placeholder="Filter by name, city, or note">
-              <select id="sort" class="form-select" style="max-width:180px">
-                <option value="alpha">Sort: A &rarr; Z</option>
-                <option value="starred">Sort: Starred First</option>
-              </select>
-            </div>
-            <p class="text-muted small text-center mb-0">Manage notes and stars by editing <code>comments.json</code>.</p>
-          </div>
-        </div>
-        <div id="roasteries" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3"></div>
-      </div>
-    </section>
-
-    <!-- Denmark Map -->
-    <section class="bg-white py-5" id="map">
-      <div class="container px-4 px-lg-5 text-center py-5">
-        <h3 class="text-secondary text-uppercase small mb-0" style="letter-spacing:2px">Locations</h3>
-        <h2 class="display-6 fw-bold text-dark mb-5">Roasteries Across Denmark</h2>
-        <div class="position-relative d-inline-block mx-auto">
-          <img src="denmark-map.png" alt="Map of Denmark showing coffee roastery locations" class="img-fluid d-block" style="max-width:500px">
-          <div id="map-markers"></div>
-        </div>
-        <div class="d-flex justify-content-center gap-4 mt-3 flex-wrap">
-          <span class="d-flex align-items-center gap-2 small text-muted"><span class="badge rounded-circle p-1" style="background:#1D809F">&nbsp;</span> Roastery city</span>
-          <span class="d-flex align-items-center gap-2 small text-muted"><span class="badge bg-warning rounded-circle p-1">&nbsp;</span> Has starred roastery</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-center py-5 border-top border-white border-opacity-10">
-      <div class="container px-4 px-lg-5">
-        <ul class="list-inline mb-4">
-          <li class="list-inline-item">
-            <a class="text-white rounded-circle d-inline-flex align-items-center justify-content-center shadow text-decoration-none" href="#page-top" style="width:4rem;height:4rem;background:#1D809F">
-              <i class="bi bi-arrow-up fs-4"></i>
-            </a>
-          </li>
-        </ul>
-        <p class="text-white-50 small mb-0">Built for GitHub Pages &mdash; serve the <code class="text-white-50">docs/</code> folder.</p>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script type="module" src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
+</body>
 </html>
