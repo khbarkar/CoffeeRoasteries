@@ -43,7 +43,7 @@
     </nav>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero Section — keeps its own bg, NOT scroll-driven -->
   <header class="hero" id="hero">
     <div class="hero-content">
       <div class="hero-title-wrap">
@@ -52,14 +52,12 @@
           <span class="hero-line">ESPRESSO  .</span>
           <span class="hero-line hero-accent">BEANS</span>
         </h1>
-        <!-- Polaroid photo pinned over the text -->
         <div class="hero-polaroid" aria-hidden="true">
           <div class="hero-pin"></div>
           <img src="polaroid.png" alt="">
         </div>
       </div>
-      <p class="hero-subtitle">In Denmark, So you don't have to.
-      </p>
+      <p class="hero-subtitle">In Denmark, So you don't have to.</p>
       <a href="#roasteries-section" class="hero-btn">
         <span>Explore Roasteries</span>
         <span class="hero-btn-icon"><i class="bi bi-cup-hot-fill"></i></span>
@@ -67,7 +65,7 @@
     </div>
   </header>
 
-  <!-- Marquee banner -->
+  <!-- Marquee banner — own opaque bg -->
   <section class="marquee-section">
     <div class="marquee-track">
       <span class="marquee-item">Copenhagen</span>
@@ -114,8 +112,16 @@
     </div>
   </section>
 
+  <!--
+    SCROLL-REACTIVE SECTIONS
+    Each data-bg-color tells the IntersectionObserver what color
+    to set on <body> when that section crosses the viewport midpoint.
+    
+    Color journey: cream → warm tan → deep teal → espresso brown
+  -->
+
   <!-- Blog Section -->
-  <section class="blog-section" id="blog">
+  <section class="blog-section" id="blog" data-bg-color="#FDF6EE">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Blog</span>
@@ -129,36 +135,41 @@
           <span class="blog-post-date">March 2026</span>
           <h3 class="blog-post-title">Finding Coffee Roasteries in Denmark</h3>
 
-          <p>In 2024 I was given a gift card to an espresso-making course as a present. Now, I have always been passionate about coffee, but I had stuck to the big brands up until I took that course.</p>
+          <p>The year is 2024. I received a gift card to an espresso-making course for my birthday. As I have considered myself something of a coffee lover for a good 35 years now, I did not think I had all that much to learn, but I went ahead with an open mind.</p>
 
-          <p>What I found there was a whole new flavour profile of espresso. And truly, I actually thought that French roast (essentially fancy coffee speak for "burned to a crisp") was an acceptable and good flavour of coffee. But having had freshly roasted beans from <a href="https://coffeecollective.dk" target="_blank" rel="noopener noreferrer">Coffee Collective</a> in Aarhus, there was no turning back.</p>
+          <p>Not only did I find out I knew much less about coffee than imagined, there were flavour profiles to espresso that I never knew existed. Sticking to the big brands purchased in bulk by discount had, up until then, been where my experimentation of espresso ended.</p>
 
-          <p>First I got a subscription of espresso from Coffee Collective, which was great. But then I started looking for other coffee roasters in Denmark and discovered that there are well over 50 independent roasteries &mdash; in this little collection of islands that hosts some 6 million people.</p>
+          <p>Another thing: I used to prefer French Roast. I have since learned that French Roast is fancy speak for "burnt to a crisp". And after 6 months of drinking nothing but high quality freshly roasted beans, I wonder how on earth I found French Roast to be even remotely adequate.</p>
+
+          <p>In the course we spent a good hour doing nothing but testing how the grinding setting changed the flavour profile of the amazing freshly roasted beans from <a href="https://coffeecollective.dk" target="_blank" rel="noopener noreferrer">Coffee Collective</a> in Aarhus. The reason I personally do not make too much of a fuss about the perfect grinding setting is simply: I am too cheap. I refuse to throw away a brewed espresso at home even if it tastes like battery acid, especially since starting to purchase nothing but quality freshly roasted beans. With shipment the cost is usually about 130 DKK a pop.</p>
+
+          <p>But I digress.</p>
+
+          <p>Initially, after the coffee workshop, I got a monthly subscription of espresso from Coffee Collective, which was great. But then I started looking for other coffee roasters in Denmark and discovered that there are well over 50 independent roasteries &mdash; in this little collection of islands that hosts some 6 million people.</p>
 
           <p>Obviously I had to set off on a path and try them all. So I dug up all the online roasteries I could find and set off to purchase at least one bag of coffee from each one.</p>
 
-          <h4>My demands were simple:</h4>
+          <h4>My requirement list is as follows:</h4>
           <ul>
             <li>It has to be espresso</li>
             <li>Payment has to be possible via Apple Pay or MobilePay (my money, my rules)</li>
             <li>I want the beans whole, to grind myself</li>
           </ul>
 
-          <p>That's it.</p>
+          <h4>My scoring system is as follows:</h4>
+          <ul>
+            <li>I will try out various grinding settings on my <strong>Sage Barista Pro</strong> until I find the one I like the most. This is done for each bag and I mark the bag with my favorite setting</li>
+            <li>I prefer lattes or cappuccino over espresso. Every coffee bag was tested with skimmed milk (0.2%), whole milk (3.5%), and Oatly Barista iKaffe</li>
+            <li>I live in Fyn and we have extremely hard water here. I use a softener filter and religiously clean my machine. But it does affect coffee flavour. Some of the coffee I liked less may have flourished with softer water. Some of the coffees may have been the exact opposite. Not much I can do about that</li>
+          </ul>
 
-          <p>Now, as for the flavours &mdash; the test here is made by a factor of n=1. I have no science behind what I liked or didn't like. It's just one person's opinion.</p>
+          <p>There are a total of <strong>N=1</strong> participants in these coffee tests. And said participant is too cheap to throw away even a bad cup.</p>
 
-          <p>My coffee machine is a <strong>Sage Barista Pro</strong>.</p>
-
-          <p>I live in Fyn and we have extremely hard water. I have a softener filter and clean my machine regularly, but water quality greatly affects coffee flavour. What tastes not so great in my case may be amazing at someone else's.</p>
-
-          <p>Grinding settings on beans is almost black magic. I try to find the perfect grind for each bag I get. But I refuse to throw away a coffee that may not have the perfect setting &mdash; I will drink the coffee anyway and adjust for the next cup. This is hardly the professional way. But for 130 or so DKK for 250g of beans, I am drinking every single drop, even if it should taste like battery acid due to my hard water and poor grinding setting.</p>
-
-          <p>I have purchased coffee from about half of the places on my list now, some 6 months after I started this project.</p>
+          <p>I have purchased coffee from about half of the places on my list now after I started this project. I must admit that I have cheated a little and repeatedly bought a few favourites instead of buying from a new place every month.</p>
 
           <p>Every single roastery so far has had outstanding service. I get everything from a little written smile on the receipt to a small caramel or coffee sticker. Frankly, I have never received such good service purchasing a kilo of Lavazza in a regular store.</p>
 
-          <p>I have a little star on the places that I personally loved the most. It may very well be that I simply never found the correct setting for the others that I didn't star, and ruined the coffee. We will never know.</p>
+          <p>I rate my favourites with espresso cups — from one cup (solid) to three cups (outstanding). It may very well be that I simply never found the correct grind setting for the ones I didn't like as much, and ruined the coffee. We will never know.</p>
 
           <p>I stand by my choices and will update as I continue to find more roasteries.</p>
         </div>
@@ -167,7 +178,7 @@
   </section>
 
   <!-- Roasteries Section -->
-  <section class="roasteries-section" id="roasteries-section">
+  <section class="roasteries-section" id="roasteries-section" data-bg-color="#E8D5C0">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Portfolio</span>
@@ -180,7 +191,7 @@
         </div>
         <select id="sort" class="filter-sort">
           <option value="alpha">A &rarr; Z</option>
-          <option value="starred">Starred First</option>
+          <option value="rated">Top Rated First</option>
         </select>
       </div>
       <div class="filter-toggles">
@@ -189,8 +200,8 @@
           <span>Purchased only</span>
         </label>
         <label class="filter-toggle">
-          <input type="checkbox" id="filterStarred">
-          <span>Starred only</span>
+          <input type="checkbox" id="filterRated">
+          <span>Rated only</span>
         </label>
         <span class="filter-counter" id="roastery-counter"></span>
       </div>
@@ -199,7 +210,7 @@
   </section>
 
   <!-- About Section -->
-  <section class="about-section" id="about">
+  <section class="about-section" id="about" data-bg-color="#1B5E5E">
     <div class="container">
       <div class="about-content">
         <h2 class="about-title">Built for coffee lovers</h2>
@@ -214,29 +225,46 @@
     </div>
   </section>
 
-  <!-- Stories Section (bottom) -->
-  <section class="stories-section" id="stories">
+  <!-- Stories Section -->
+  <section class="stories-section" id="stories" data-bg-color="#2C1810">
     <div class="container">
-      <span class="section-tag">Stories</span>
+      <span class="section-tag section-tag--light">The Journey</span>
       <div class="stories-card">
         <div class="stories-image">
           <img src="denmark-map.png" alt="Map of Denmark" loading="lazy">
         </div>
         <div class="stories-body">
-          <h2 class="stories-title">Inside the World of Danish Coffee</h2>
+          <h2 class="stories-title">From Fyn to Every Corner of Denmark</h2>
           <p class="stories-text">
-            Denmark's coffee scene is one of Europe's most exciting. From specialty micro-roasters
-            in Copenhagen to hidden gems in Jutland, Danish roasters are pushing boundaries with
-            single-origin beans, sustainable sourcing, and innovative roast profiles. This tracker
-            covers <strong id="stat-total-2">59</strong> roasteries across the country.
+            What started as a single espresso course turned into a quest across Denmark's islands and peninsula.
+            From micro-roasters on Bornholm to specialty houses in Jutland, every bag tells its own story &mdash;
+            of origin, of craft, and of the people who coax flavour from green beans in their garages, warehouses, and workshops.
           </p>
+          <div class="stories-stats">
+            <div class="stories-stat">
+              <div class="stories-stat-number" id="stat-total-2">0</div>
+              <div class="stories-stat-label">Roasteries Found</div>
+            </div>
+            <div class="stories-stat">
+              <div class="stories-stat-number" id="stat-purchased">0</div>
+              <div class="stories-stat-label">Purchased</div>
+            </div>
+            <div class="stories-stat">
+              <div class="stories-stat-number" id="stat-favourites">0</div>
+              <div class="stories-stat-label">Favourites</div>
+            </div>
+            <div class="stories-stat">
+              <div class="stories-stat-number" id="stat-regions">0</div>
+              <div class="stories-stat-label">Regions</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- Footer — own opaque bg -->
+  <footer class="site-footer" data-bg-color="#1A120D">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">

@@ -1,0 +1,22 @@
+{
+  "rating": {
+    "type": "espresso",
+    "max": 3,
+    "icon": "☕",
+    "label": "Espresso Rating"
+  },
+  "sections": {
+    "stories": {
+      "title": "A Journey Through 60 Roasteries",
+      "subtitle": "One Person's Quest",
+      "description": "What started with a gift card to an espresso course turned into an obsessive mission: taste coffee from every independent roastery in Denmark. From Copenhagen's experimental labs to tiny workshops in Jutland, each bag tells a story of craft, passion, and the relentless pursuit of the perfect shot. This isn't a scientific study—it's one coffee lover's unfiltered journey through hard water, grinding mishaps, and the occasional transcendent cup that makes it all worthwhile. Some roasteries earned stars. Others taught me patience. All of them proved that Danish coffee culture is something extraordinary."
+    }
+  },
+  "colors": {
+    "hero": "linear-gradient(160deg, #145E80 0%, #1B3A4A 50%, #3A2218 100%)",
+    "blog": "#8B6F47",
+    "roasteries": "#2A5F7F",
+    "about": "#C17A4A",
+    "stories": "#4A7C9B"
+  }
+}

@@ -1,5 +1,8 @@
 let allRoasteries = [];
 
+/* ================================================
+   DATA
+   ================================================ */
 async function loadData() {
   try {
     const res = await fetch('data.json');
@@ -16,16 +19,68 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+/* ================================================
+   SCROLL-REACTIVE BACKGROUND
+   
+   Architecture: like a BGP route table — each section
+   "advertises" its preferred background color via
+   data-bg-color. The IntersectionObserver acts as the
+   control plane, and body.style.backgroundColor is 
+   the forwarding table. CSS transition handles the
+   smooth convergence.
+   
+   rootMargin '-50% 0% -50% 0%' means the observer
+   fires when a section crosses the exact middle of
+   the viewport — like a 50% threshold trigger.
+   ================================================ */
+function initScrollBackground() {
+  const sections = document.querySelectorAll('[data-bg-color]');
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const color = entry.target.getAttribute('data-bg-color');
+        if (color) {
+          document.body.style.backgroundColor = color;
+        }
+      }
+    });
+  }, {
+    // Fire when the section crosses the viewport midpoint
+    rootMargin: '-50% 0% -50% 0%'
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+/* ================================================
+   CARD RENDERING
+   ================================================ */
+function createCupRating(rating, maxCups) {
+  maxCups = maxCups || 3;
+  let html = '<div class="roastery-card-rating">';
+  for (let i = 1; i <= maxCups; i++) {
+    if (i <= rating) {
+      html += '<span class="cup"><i class="bi bi-cup-hot-fill"></i></span>';
+    } else {
+      html += '<span class="cup empty"><i class="bi bi-cup-hot"></i></span>';
+    }
+  }
+  html += '</div>';
+  return html;
+}
+
 function createCard(r) {
   const card = document.createElement('div');
-  card.className = 'roastery-card' + (r.purchased ? ' visited' : '') + (r.starred ? ' starred' : '');
+  const isRated = r.rating && r.rating > 0;
+  card.className = 'roastery-card' + (r.purchased ? ' visited' : '') + (isRated ? ' rated' : '');
 
   let headerHtml = `
     <div class="roastery-card-header">
       <div class="roastery-card-title">
         ${r.purchased ? '<span class="roastery-card-check"><i class="bi bi-check-circle-fill"></i></span>' : ''}
         <span class="roastery-card-name">${escapeHtml(r.name)}</span>
-        ${r.starred ? '<span class="roastery-card-star"><i class="bi bi-star-fill"></i></span>' : ''}
       </div>
       ${r.website ? `<a href="${escapeHtml(r.website)}" target="_blank" rel="noopener noreferrer" class="roastery-card-link" title="Visit website"><i class="bi bi-box-arrow-up-right"></i></a>` : ''}
     </div>
@@ -33,15 +88,17 @@ function createCard(r) {
 
   let bodyParts = [];
 
+  // Espresso cup rating
+  if (r.purchased || isRated) {
+    bodyParts.push(createCupRating(r.rating || 0));
+  }
+
   // Badges
   let badges = '';
   if (r.purchased) {
     badges += '<span class="roastery-card-badge badge-purchased"><i class="bi bi-bag-check-fill"></i> Purchased</span>';
   } else {
     badges += '<span class="roastery-card-badge badge-not-purchased">Not yet</span>';
-  }
-  if (r.starred) {
-    badges += '<span class="roastery-card-badge badge-starred"><i class="bi bi-star-fill"></i> Favourite</span>';
   }
   bodyParts.push(`<div>${badges}</div>`);
 
@@ -59,7 +116,7 @@ function createCard(r) {
     bodyParts.push(`<a href="${escapeHtml(r.website)}" target="_blank" rel="noopener noreferrer" class="roastery-card-url"><i class="bi bi-link-45deg"></i> ${escapeHtml(clean)}</a>`);
   }
 
-  if (r.has_espresso) {
+  if (r.no_espresso) {
     bodyParts.push('<div class="roastery-card-skip"><i class="bi bi-x-circle"></i> No espresso</div>');
   }
 
@@ -67,6 +124,9 @@ function createCard(r) {
   return card;
 }
 
+/* ================================================
+   FILTER / SORT / RENDER
+   ================================================ */
 function renderAll() {
   const container = document.getElementById('roasteries');
   if (!container) return;
@@ -74,12 +134,12 @@ function renderAll() {
   const q = (document.getElementById('search')?.value || '').toLowerCase();
   const sort = document.getElementById('sort')?.value || 'alpha';
   const filterPurchased = document.getElementById('filterPurchased')?.checked || false;
-  const filterStarred = document.getElementById('filterStarred')?.checked || false;
+  const filterRated = document.getElementById('filterRated')?.checked || false;
 
   let items = [...allRoasteries];
 
   if (filterPurchased) items = items.filter(i => i.purchased);
-  if (filterStarred) items = items.filter(i => i.starred);
+  if (filterRated) items = items.filter(i => i.rating && i.rating > 0);
 
   if (q) {
     items = items.filter(i =>
@@ -89,8 +149,8 @@ function renderAll() {
     );
   }
 
-  if (sort === 'starred') {
-    items.sort((a, b) => (b.starred - a.starred) || a.name.localeCompare(b.name));
+  if (sort === 'rated') {
+    items.sort((a, b) => ((b.rating || 0) - (a.rating || 0)) || a.name.localeCompare(b.name));
   } else {
     items.sort((a, b) => a.name.localeCompare(b.name));
   }
@@ -98,14 +158,38 @@ function renderAll() {
   container.innerHTML = '';
   items.forEach(r => container.appendChild(createCard(r)));
 
-  // Update counter
   const counter = document.getElementById('roastery-counter');
   const purchased = allRoasteries.filter(r => r.purchased).length;
   if (counter) {
-    counter.textContent = `Showing ${items.length} of ${allRoasteries.length} \u00B7 ${purchased} purchased`;
+    counter.textContent = `Showing ${items.length} of ${allRoasteries.length} · ${purchased} purchased`;
   }
 }
 
+/* ================================================
+   STATS
+   ================================================ */
+function updateStats() {
+  const total = allRoasteries.length;
+  const purchased = allRoasteries.filter(r => r.purchased).length;
+  const rated = allRoasteries.filter(r => r.rating && r.rating > 0).length;
+  const regions = new Set(allRoasteries.filter(r => r.region).map(r => {
+    const parts = r.region.split(',');
+    return parts.length > 1 ? parts[1].trim() : parts[0].trim();
+  }));
+
+  const elTotal = document.getElementById('stat-total-2');
+  if (elTotal) elTotal.textContent = total;
+  const elPurchased = document.getElementById('stat-purchased');
+  if (elPurchased) elPurchased.textContent = purchased;
+  const elFavourites = document.getElementById('stat-favourites');
+  if (elFavourites) elFavourites.textContent = rated;
+  const elRegions = document.getElementById('stat-regions');
+  if (elRegions) elRegions.textContent = regions.size;
+}
+
+/* ================================================
+   NAV / MOBILE / SCROLL
+   ================================================ */
 function initNav() {
   const nav = document.getElementById('site-nav');
   window.addEventListener('scroll', () => {
@@ -137,21 +221,23 @@ function initSmoothScroll() {
   });
 }
 
+/* ================================================
+   BOOT
+   ================================================ */
 document.addEventListener('DOMContentLoaded', async () => {
   allRoasteries = await loadData();
 
   renderAll();
+  updateStats();
 
+  // Init all systems
+  initScrollBackground();
   initNav();
   initMobileMenu();
   initSmoothScroll();
 
-  // Update counts
-  const el = document.getElementById('stat-total-2');
-  if (el) el.textContent = allRoasteries.length;
-
-  // All filter/sort controls
-  ['search', 'sort', 'filterPurchased', 'filterStarred'].forEach(id => {
+  // Filter/sort controls
+  ['search', 'sort', 'filterPurchased', 'filterRated'].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     el.addEventListener('input', renderAll);
