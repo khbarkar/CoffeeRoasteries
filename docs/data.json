@@ -37,8 +37,8 @@
   },
   {
     "name": "Berry & Bean",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Ethiopia Sidamo 250gr",
     "website": "https://www.berrybean.dk/",
     "region": "Aarhus, Jylland",
     "rating": 0,
@@ -190,8 +190,8 @@
   },
   {
     "name": "Kaffe Værkstedet",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Espresso Bomben 225gr. Dark roast",
     "website": "https://kaffevaerkstedet.dk",
     "region": "",
     "rating": 0,
