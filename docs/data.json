@@ -11,7 +11,7 @@
   {
     "name": "Als Risteri",
     "purchased": 1,
-    "comment": "Als espresso \"full city roast\"  220gr  \n. Not a bad coffee by nany means. I found that if I set the grinder to a 7 or 8 I got the most flavour without too much acidity.\n\n Any courser and it turned watery. \n  I definetly like this one the most with regular whole milk or skimmed milk.\n The oatmilk is quite sweet and found it overpowered the mild flavour. Super quick service, they shipped the same day I rderer and I got it to my pakkeshop the day after",
+    "comment": "Als espresso \"full city roast\" 220gr. Not a bad coffee by any means. I found that if I set the grinder to a 7 or 8 I got the most flavour without too much acidity. Any coarser and it turned watery. I definitely like this one the most with regular whole milk or skimmed milk. The oat milk is quite sweet and found it overpowered the mild flavour. Super quick service, they shipped the same day I ordered and I got it to my pakkeshop the day after.",
     "website": "https://alsristeri.dk/",
     "region": "Sønderborg, Jylland",
     "rating": 2,
@@ -20,7 +20,7 @@
   {
     "name": "Andersen & Maillard",
     "purchased": 1,
-    "comment": "Lalesa Black Honey 250gr. This one was a delight. I broke my always purchase coffee from a new roaster rule just to get another bag of this. The coffee made me think of cherries, and as weird as that sounds, I cannot get enough of it. I kept the grinder a little courser here because the beans were very glossy (oily?) and a finer setting just created over extracted tar. I loved everything about this coffee and found it perfect with the sweet thick oat milk. Loved this. Excellent quick service. Not the cheapest but 100% worth it.",
+    "comment": "Lalesa Black Honey 250gr. This one was a delight. I broke my always purchase coffee from a new roaster rule just to get another bag of this. The coffee made me think of cherries, and as weird as that sounds, I cannot get enough of it. I kept the grinder a little coarser here because the beans were very glossy (oily?) and a finer setting just created over extracted tar. I loved everything about this coffee and found it perfect with the sweet thick oat milk. Loved this. Excellent quick service. Not the cheapest but 100% worth it.",
     "website": "https://www.andersenmaillard.dk/",
     "region": "København, Sjælland",
     "rating": 3,
@@ -56,7 +56,7 @@
   {
     "name": "Buchwalds",
     "purchased": 1,
-    "comment": "Buchwald's Espresso - 250g, I am dying to visit Bornholm one day, though it was especially interesting to try oat a roastery from this more distant f the danish Islands.\n Somewhat mild espresso that I mostly used in skimmed milk and with a finer grinding setting. The Oatmilk hid the coffee falvour instead if bringing it out. This one was a little tricky for me. I used a much finer setting than I normally do for any espresso to get the most flavour out. But once I got there I really enjoyed it.\n Loved the design.\n Flawless checkout and payment service altough GLS decided to hold on to this for an extra couple of days so it took a little longer than most to get the coffee.\n ",
+    "comment": "Buchwald's Espresso - 250g. I am dying to visit Bornholm one day, though it was especially interesting to try out a roastery from this more distant of the Danish Islands. Somewhat mild espresso that I mostly used in skimmed milk and with a finer grinding setting. The oat milk hid the coffee flavour instead of bringing it out. This one was a little tricky for me. I used a much finer setting than I normally do for any espresso to get the most flavour out. But once I got there I really enjoyed it. Loved the design. Flawless checkout and payment service although GLS decided to hold on to this for an extra couple of days so it took a little longer than most to get the coffee.",
     "website": "https://buchwalds.dk",
     "region": "Bornholm",
     "rating": 2,
@@ -74,7 +74,7 @@
   {
     "name": "Coffee Collective",
     "purchased": 1,
-    "comment": "Subscription have gotten I think 10 different kinds \n",
+    "comment": "Subscription - have gotten I think 10 different kinds.",
     "website": "https://coffeecollective.dk",
     "region": "København, Sjælland",
     "rating": 3,
@@ -263,16 +263,16 @@
   {
     "name": "Køge Kafferisteri",
     "purchased": 1,
-    "comment": "NICARAGUA Limited Edition  × 1\nMængde:\n250 Gram",
+    "comment": "NICARAGUA Limited Edition  × 1\nMængde:\n250 Gram. I had some luck with going all the way down to 6 on my grinder. Less than that , on fresh beans, and asphalt comes out and the machine sounds like its about to self-destruct. \n This is a milder flavoured coffee that needs the higher temp and finer grind to flourishm but cheaper home models like mine have a hard time with that.  \n I managed to get a decent cup after prolonging the extraction time a little, allowing for a second of more water ( it really can turn the coffee from sour to delicious, a single second more ) , then raising the temperature to 95° and the grind setting to 6. Tried this coffee with full fat Oatmilk and full fat regular milk and there was very little difference. \n This coffee did not shine in my home machine. I think it needs a grade above mine to truly flourish",
     "website": "https://koegekafferisteri.dk",
     "region": "Koge, Sjælland",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
     "name": "LA CABRA",
     "purchased": 1,
-    "comment": "Jorge Vásquez 250gr 169kr\n+shipment 29kr",
+    "comment": "Jorge Vásquez 250gr 169kr\n+shipment 29kr. Abslutely delicious. Tried a few grind settings and found 7 to be the best for me. 8 and 6 worked well also even if the extracion got a little longer / shorter. The coffee did not suffer at all. This one I only tried with Oatly barista oatmilk, the full fat grey one and the newer lighter flavored white packaging. \n Was sad when I finished that last of the beans.",
     "website": "https://lacabra.com",
     "region": "",
     "rating": 3,
@@ -344,7 +344,7 @@
   {
     "name": "Nygaards Kaffe",
     "purchased": 1,
-    "comment": "Etiopisk Sidamo Økologisk 250gr 95kr\n+shipment 49kr \nCame vacuum packed wiht a little dark sugar candy . Perfect coffee, loved the silky texture and taste",
+    "comment": "Etiopisk Sidamo Økologisk 250gr 95kr + shipment 49kr. Came vacuum packed with a little dark sugar candy. Perfect coffee, loved the silky texture and taste.",
     "website": "https://dengyldneloeve.dk/kat/the-og-kaffe/kaffe/",
     "region": "",
     "rating": 3,
@@ -353,7 +353,7 @@
   {
     "name": "Nørre Snede Kafferisteri",
     "purchased": 1,
-    "comment": "Koffeinfri Peru - økologiskv200g 69 DKK\nMonsooned Malabar INDIA 200G 69 DKK\n + shipment 49kr",
+    "comment": "Koffeinfri Peru - økologisk 200g 69 DKK. Monsooned Malabar INDIA 200G 69 DKK + shipment 49kr.",
     "website": "https://www.noerresnedekafferisteri.dk",
     "region": "Herning , Jylland",
     "rating": 0,
@@ -425,16 +425,16 @@
   {
     "name": "Strandvejsristeriet",
     "purchased": 1,
-    "comment": "Espresso Velo\nEspressoblend med Guatemala, Huehuetenango, og vores brasilianske arabica kaffe fra Fazenda Rainha, som er af sorten yellow bourbon, og en pulped natural kaffe med en stor naturlig sødme, når den er ristet korrekt.\nHertil en portion Etiopien, Sidamo som ikke er vasket, men natural processeret på farmen Nefas og giver elegant sødme og tyngde til blandingen. For at give frugt og fylde er der til slut iblandet lidt økologisk Honduras fra Capucas.",
+    "comment": "Espresso Velo\nEspressoblend. This is a light roast with a mild flavor. To make this coffee justice you need to grind it finely and use a relatively high temperature on the espresso machine. \n I made several attempts, raised the temp to 97° in the end ( its a Sage Barista and setting the temprerature is a mic of barious button combinations and guesswork ) and as fine as I could muster. But sadly I don't think my machine ca do it justice. \n I either got a sour under-extracted flavor where not enough water makes it though the coffee, or when trying coarser grind and lower temps I got the dirt flavour of over extraction. \n I am sure that in a proper machine that handles finer grinds than mine , this coffee is excellent.  But I just could not make it work for me",
     "website": "https://www.strandvejsristeriet.dk",
     "region": "",
-    "rating": 0,
+    "rating": 1,
     "no_espresso": 0
   },
   {
     "name": "Svendborg Kafferisteri",
     "purchased": 1,
-    "comment": "Decaf Arbica 250g \nBought in store , the coffeee was pretty stale and old. \nCan't reallly compete with coffeees directly from the roasteries that are fresh. ",
+    "comment": "Decaf Arabica 250g. Bought in store, the coffee was pretty stale and old. Can't really compete with coffees directly from the roasteries that are fresh.",
     "website": "https://kaerspecialiteter.dk/svendborg-kafferisteri/",
     "region": "Svendborg, Fyn",
     "rating": 0,
@@ -452,7 +452,7 @@
   {
     "name": "Te & Kaffe specialisten",
     "purchased": 1,
-    "comment": "Kaffe med julet smag 225g \nBought in store. Not good for espresso even if store attendant assured it was fine for espresso. Got a watery cinnamon tasting sewer water out of this. \nPerfectly fine for french press. \nIts not possible to purchase over the website. Need to find in a store somewhere. Not sure I can be bothered",
+    "comment": "Kaffe med julet smag 225g. Bought in store. Not good for espresso even if store attendant assured it was fine for espresso. Got a watery cinnamon tasting sewer water out of this. Perfectly fine for french press. It's not possible to purchase over the website. Need to find in a store somewhere. Not sure I can be bothered.",
     "website": "https://www.teogkaffespecialisten.dk",
     "region": "Karlslunde, Sjælland",
     "rating": 0,
@@ -479,7 +479,7 @@
   {
     "name": "Winthers Kaffe",
     "purchased": 0,
-    "comment": "Can´t see on the website where the roastery is. The shop is in Odense and they claim their coffeee is freshly roasted. ",
+    "comment": "Can't see on the website where the roastery is. The shop is in Odense and they claim their coffee is freshly roasted.",
     "website": "https://wintherskaffe.dk/",
     "region": "Odense, Fyn",
     "rating": 0,
