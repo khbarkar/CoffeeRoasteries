@@ -118,8 +118,8 @@
   },
   {
     "name": "GarageRisteriet",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Økologisk Espresso Blend 250gr ",
     "website": "https://garageristeriet.dk",
     "region": "",
     "rating": 0,
@@ -163,10 +163,10 @@
   },
   {
     "name": "Impact Roasters",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Coffee Beans - MAZAA - Guji 250gr. Sweet and juicy with notes of honey and spice. Naturally processed and sun-dried on raised beds in the forested hills of Guji. Smooth and medium-bodied with a deep, vibrant character. I could select which kind of roast I wanted here. Thats is the only roastery I have shopped form that has this option. For the fun of it I select this same bean in light roast and medium roast. \n Since starting on this coffee journey I am not that into dark roast anymhas this option. For the fun of it I select this same bean in light roast and medium roast. \n Since starting on this coffee journey I am not that into dark roast anymore..",
     "website": "https://impactroasters.dk/",
-    "region": "",
+    "region": "København, Sjælland",
     "rating": 0,
     "no_espresso": 0
   },
@@ -200,10 +200,10 @@
   },
   {
     "name": "Kaffeagenterne",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Månedens Kaffe - Despresso Espresso Decaff, ristet 500gr. I really hate when I am forced to buy more than 250gr. I wanted to find a decaf from a roastery I havent tried before. Most of the roasteries do not have decaf so I went for this one anyway.\n I usually don't shop if there is no option for a smaller bag though. \n These coffees are expensive and I dont want to end up with 500gr of pricy beans that may not suit me or my machine. However the price here was about the same as a 250gr in other places so I ordered a 500gr",
     "website": "https://kaffeagenterne.dk/",
-    "region": "",
+    "region": "Randers, Jylland",
     "rating": 0,
     "no_espresso": 0
   },
