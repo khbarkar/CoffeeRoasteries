@@ -524,6 +524,62 @@ code { background: rgba(0,0,0,.08); padding: .15em .4em; border-radius: 4px; fon
   .site-nav { gap: 8px; }
   .blog-post-content { padding: 20px 16px 24px; }
   .blog-post-content p { font-size: 15px; }
+  .container { padding: 0 16px; }
+  .hero-subtitle { font-size: 15px; }
+  .stories-stats { gap: 18px 28px; }
+  .filter-toggles { margin-top: -12px; }
+  .hero-btn-icon { width: 48px; height: 48px; }
+}
+
+/* Very small phones — prevent hero/title overflow */
+@media (max-width: 360px) {
+  .hero-line { font-size: clamp(40px, 13vw, 52px); }
+  .blog-post-title { font-size: 21px; }
+  .stories-stat-number { font-size: 28px; }
+}
+
+/* ================================================
+   LARGE / 4K / ULTRAWIDE DESKTOPS
+   Container capped at 1200px strands content on big
+   monitors. Widen container, grid, and text so the
+   layout scales with the display instead of pooling
+   in the middle.
+   ================================================ */
+@media (min-width: 1600px) {
+  .container { max-width: 1500px; }
+  .blog-post-full { max-width: 1080px; }
+  .blog-post-content { padding: 56px 80px 64px; }
+  .blog-post-title { font-size: 38px; }
+  .blog-post-content p,
+  .blog-post-content h4,
+  .blog-post-content ul li { font-size: 18px; }
+  .hero-subtitle,
+  .about-text,
+  .stories-text { font-size: 18px; }
+  .stories-title { font-size: 28px; }
+  .roasteries-grid { grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 24px; }
+  .roastery-card-name { font-size: 20px; }
+  .roastery-card-note { font-size: 15px; }
+}
+
+@media (min-width: 2200px) {
+  .container { max-width: 1900px; }
+  .blog-post-full { max-width: 1280px; }
+  .blog-post-content p,
+  .blog-post-content h4,
+  .blog-post-content ul li { font-size: 20px; }
+  .hero-subtitle,
+  .about-text,
+  .stories-text { font-size: 20px; }
+  .roasteries-grid { grid-template-columns: repeat(auto-fill, minmax(520px, 1fr)); gap: 28px; }
+  .stories-stats { gap: 64px; }
+}
+
+/* 4K+ — push wider still so ultrawide/4K fills out */
+@media (min-width: 3000px) {
+  .container { max-width: 2400px; }
+  .blog-post-full { max-width: 1500px; }
+  .roasteries-grid { grid-template-columns: repeat(auto-fill, minmax(560px, 1fr)); }
 }
 
 @keyframes fadeInUp {
