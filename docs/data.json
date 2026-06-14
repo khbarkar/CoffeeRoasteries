@@ -46,8 +46,8 @@
   },
   {
     "name": "Brændeholm Risteri",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Purchased Primo - Vores egen blend til Espresso, not tested",
     "website": "https://braendeholmristeri.dk",
     "region": "Faaborg, Fyn",
     "rating": 0,
@@ -82,8 +82,8 @@
   },
   {
     "name": "Colombani",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Purchased, not tried yet. Hele kaffebønner, 4 x 100 gram, økologisk (mellem og lys risteprofil)",
     "website": "https://www.colombani.dk/",
     "region": "Ebeltoft, Jylland",
     "rating": 0,
@@ -101,10 +101,10 @@
   {
     "name": "Emo Fabrik",
     "purchased": 1,
-    "comment": "Espresso Honduras Øko Specialty Coffee - Comsa - 250 g \nPeru Øko Specialty Coffee - 250 g ",
+    "comment": "Espresso Honduras Øko Specialty Coffee - Comsa - 250 g \nPeru Øko Specialty Coffee - 250 g. Really good mild taste. With a somewhat finer grind and a shirter out I got a great thick crema. I did prefer the Peru one over Honduras but both where really excellent.",
     "website": "https://emofabrik.dk/",
     "region": "Aarhus, Jylland",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
@@ -119,10 +119,10 @@
   {
     "name": "GarageRisteriet",
     "purchased": 1,
-    "comment": "Økologisk Espresso Blend 250gr ",
+    "comment": "Økologisk Espresso Blend 250gr. This was ok, I tried several grinds and milk versions of this one, Skimmed milk, Oat milk, Bareista milk and full fat. Also several grind setrtings between 6-11 and timming options to get the perfect pour. I got several great cups with a setting of 8 and slightly shorter pour. I never managed to make these beans sing. But perfectly good roast. No complaints ",
     "website": "https://garageristeriet.dk",
     "region": "",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
@@ -136,8 +136,8 @@
   },
   {
     "name": "Hipster Brew",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "I am sadly forced to purchase the 1 kg option. Even if the coffeee is great it always vexes me to not have a smaller tasting option available. I got the Honduras + Etiopien Espresso",
     "website": "https://hipsterbrew.com/",
     "region": "",
     "rating": 0,
@@ -183,19 +183,19 @@
   {
     "name": "Kaffe Lars",
     "purchased": 1,
-    "comment": "Ethiopia, Sidamo 500gr - not possible to buy smaller :( \n",
+    "comment": "Ethiopia, Sidamo 500gr - not possible to buy smaller :( . Very good pour. I love coffee from this area and I have yet to be disappointed by a sidamo roast. This one I had the best latte/cappuccino with full fat milk, Oatly barista and Thise 4.5% Jersey milk. The combination of the cherry flavour from the beans blended with the sweetness of the full fat milks was heaven.\n",
     "website": "https://kaffelars.dk",
     "region": "Odense, Fyn",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
     "name": "Kaffe Værkstedet",
     "purchased": 1,
-    "comment": "Espresso Bomben 225gr. Dark roast",
+    "comment": "Espresso Bomben 225gr. Dark roast. Its a good coffee but I have as of late more preffered the lighter roasts, medium or light. There as an after taste of the darker ones that, for some reason, I do not prefer any more. It used to bemy absolute favorite. So for no fault of its own I did not prefer this coffee. I have just gotten used to the lighter roasts",
     "website": "https://kaffevaerkstedet.dk",
     "region": "",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
@@ -228,10 +228,10 @@
   {
     "name": "Kaffevaerket",
     "purchased": 0,
-    "comment": "They don't have an online store, Have to go to the coffee shop to buy their coffee.",
+    "comment": "They don't have an online store, Have to go to the coffee shop to buy their coffee. Got two bags from them Skibhusene and Thrigefirkanten. I definetly preffered Skibhusene. Good full coffee but had a slighly sooty aftertaste sometimes. This one I mostly used skimmed 0.5% milk with. Seemed to match better than fattier versions",
     "website": "https://kaffevaerket.dk",
     "region": "Odense, Fyn",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
@@ -254,8 +254,8 @@
   },
   {
     "name": "Kontra Coffee",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Purchased, Costa Rica Corazon de Jesus Lysristet. Not tested yet",
     "website": "https://www.kontracoffee.com",
     "region": "",
     "rating": 0,
