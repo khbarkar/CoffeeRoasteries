@@ -298,15 +298,6 @@
     "no_espresso": 0
   },
   {
-    "name": "Mols Kafferisteri",
-    "purchased": 0,
-    "comment": "",
-    "website": "",
-    "region": "",
-    "rating": 0,
-    "no_espresso": 0
-  },
-  {
     "name": "Mørk Kaffe",
     "purchased": 0,
     "comment": "",
@@ -354,15 +345,15 @@
   {
     "name": "Nørre Snede Kafferisteri",
     "purchased": 1,
-    "comment": "Koffeinfri Peru - økologisk 200g. Monsooned Malabar INDIA 200G.",
+    "comment": "Koffeinfri Peru - økologisk 200g. Monsooned Malabar INDIA 200G. Really good decaf. Have purchaes a couple of times now however it has that slightly darker roast that for some reason I like less these days. But the glossy beans make for a wonderful flavor. Great for an evening cup when I avoid caffeine. Makes a super creamy cappuccino",
     "website": "https://www.noerresnedekafferisteri.dk",
     "region": "Herning , Jylland",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
     "name": "Odsherreds Kafferisteri",
-    "purchased": 1,
+    "purchased": 0,
     "comment": "",
     "website": "https://www.odsherredskafferisteri.dk",
     "region": "",
@@ -381,28 +372,28 @@
   {
     "name": "Prolog Coffee",
     "purchased": 1,
-    "comment": "Israel Jamioy Honey 250gr",
+    "comment": "Israel Jamioy Honey 250gr. This was an incredible roast. I put the grinder to a 7 and used the Thise jersey milkfor every cup. INdeed I hid this bag away when I had guests over. This one was for me myself and I , and I  have no trouble defending that. Fantasic complext flavour, thick crema that my poos household Sage barista had no trouble entertaining. Will absolutely purchase this again",
     "website": "https://www.prologcoffee.com",
     "region": "",
-    "rating": 0,
+    "rating": 3,
     "no_espresso": 0
   },
   {
     "name": "Risteriet",
     "purchased": 1,
-    "comment": "Daily espresso 250gr ",
+    "comment": "Daily espresso 250gr. Good coffee. No issues. Was maybe a bit unlucky  with my machine. I think this espresso fares better with a more professional machine that can run at higher pressure and temp than mine. I never got a full melody out of this. Good coffee, and all my milks, full fat or skimmed worked well here",
     "website": "https://www.risteriet.dk",
     "region": "Glostrup, Sjælland",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
     "name": "Roast Coffee",
     "purchased": 1,
-    "comment": "Mushonyi 250gr & DUO45 - 8oz (227 grams)",
+    "comment": "Mushonyi 250gr & DUO45 - 8oz (227 grams). Both fantastic brands but It took me a whle to get the best setting. I seemed to go from either over or under extracted no matter what setting. INcrease the temp a bit and ran at a courser grind and the DUO45 delivered. Mushonyi always suffered a little. I think it needs a better machine than mine",
     "website": "https://roast.com",
     "region": "",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   },
   {
