@@ -1,6 +1,5 @@
 [
-  {
-    "name": "Aekvator kaffe",
+  name": "Aekvator kaffe",
     "purchased": 1,
     "comment": "Espresso Equador 250gr. Bought in store in Nyborg. \nI think it was old when I bought it, beans very dry and tasteless. \nI ended up using the beans in my plants to deter gnats. \n\nWas going to buy online but they only accept dankort or bank transfer, not even mobile pay. I really cannot be bothered.",
     "website": "https://www.aekvatorkaffe.dk",
@@ -127,8 +126,8 @@
   },
   {
     "name": "Hedekaffe",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Colombia Grand Café (Hele bønner, 500g)",
     "website": "https://www.hedekaffe.dk/",
     "region": "",
     "rating": 0,
@@ -154,8 +153,8 @@
   },
   {
     "name": "Ideal Kaffe",
-    "purchased": 0,
-    "comment": "",
+    "purchased": 1,
+    "comment": "Peru El Mirante - 500g, Hele Bønner",
     "website": "https://idealkaffe.dk",
     "region": "",
     "rating": 0,
