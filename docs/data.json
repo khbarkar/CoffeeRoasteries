@@ -5,7 +5,7 @@
     "comment": "Espresso Equador 250gr. Bought in store in Nyborg. \nI think it was old when I bought it, beans very dry and tasteless. \nI ended up using the beans in my plants to deter gnats. \n\nWas going to buy online but they only accept dankort or bank transfer, not even mobile pay. I really cannot be bothered.",
     "website": "https://www.aekvatorkaffe.dk",
     "region": "Vejle, Jylland",
-    "rating": 1, 
+    "rating": 1,
     "no_espresso": 0
   },
   {
@@ -164,7 +164,7 @@
   {
     "name": "Impact Roasters",
     "purchased": 1,
-    "comment": "Coffee Beans - MAZAA - Guji 250gr. Sweet and juicy with notes of honey and spice. Naturally processed and sun-dried on raised beds in the forested hills of Guji. Smooth and medium-bodied with a deep, vibrant character. I could select which kind of roast I wanted here. Thats is the only roastery I have shopped form that has this option. For the fun of it I select this same bean in light roast and medium roast. \n Since starting on this coffee journey I am not that into dark roast anymhas this option. For the fun of it I select this same bean in light roast and medium roast. \n Since starting on this coffee journey I am not that into dark roast anymore..",
+    "comment": "Coffee Beans - MAZAA - Guji 250gr. Sweet and juicy with notes of honey and spice. Naturally processed and sun-dried on raised beds in the forested hills of Guji. Smooth and medium-bodied with a deep, vibrant character. I could select which kind of roast I wanted here. Thats is the only roastery I have shopped form that has this option. For the fun of it I select this same bean in light roast and medium roast. \n Since starting on this coffee journey I am not that into dark roast anymore..",
     "website": "https://impactroasters.dk/",
     "region": "København, Sjælland",
     "rating": 0,
@@ -174,7 +174,6 @@
     "name": "Just Coffee",
     "purchased": 1,
     "comment": "Espresso Slowdown koffeinfri  250gr. Really good decaf. Ended up buying an extra kilo.\nNote, I love their Ethiopian Natural and put trying new roasteries on hold for a while just to have that coffee for a month.  \n In fact I cheat and I always have a bag of their Ethiopian natural at hoome now. \n If I get dissapointing roasts that my machine cannot work with, I comfort myself with a cup r two from this roast.  \n setting 7, 95°and just the factory default extraction time.  \n In a Pixar world,this coffee would keep machine from getting depressed if it tries with too many roasts that it does not do justice. It needs a coffee every now and then that hits the sweet spot everytime. ",
-
     "website": "https://www.justcoffee.dk",
     "region": "Roskilde, Sjælland",
     "rating": 3,
@@ -227,7 +226,7 @@
   },
   {
     "name": "Kaffevaerket",
-    "purchased": 0,
+    "purchased": 1,
     "comment": "They don't have an online store, Have to go to the coffee shop to buy their coffee. Got two bags from them Skibhusene and Thrigefirkanten. I definetly preffered Skibhusene. Good full coffee but had a slighly sooty aftertaste sometimes. This one I mostly used skimmed 0.5% milk with. Seemed to match better than fattier versions",
     "website": "https://kaffevaerket.dk",
     "region": "Odense, Fyn",
