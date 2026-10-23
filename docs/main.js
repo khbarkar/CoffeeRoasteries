@@ -151,6 +151,15 @@ function renderAll() {
 
   if (sort === 'rated') {
     items.sort((a, b) => ((b.rating || 0) - (a.rating || 0)) || a.name.localeCompare(b.name));
+  } else if (sort === 'added') {
+    // Newest first; ties broken by name
+    items.sort((a, b) => (b.added || '').localeCompare(a.added || '') || a.name.localeCompare(b.name));
+  } else if (sort === 'region') {
+    // Entries without a region go last
+    items.sort((a, b) => {
+      if (!a.region !== !b.region) return a.region ? -1 : 1;
+      return (a.region || '').localeCompare(b.region || '') || a.name.localeCompare(b.name);
+    });
   } else {
     items.sort((a, b) => a.name.localeCompare(b.name));
   }

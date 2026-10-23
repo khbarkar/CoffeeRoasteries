@@ -6,7 +6,8 @@
     "website": "https://www.aekvatorkaffe.dk",
     "region": "Vejle, Jylland",
     "rating": 1,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Als Risteri",
@@ -15,7 +16,8 @@
     "website": "https://alsristeri.dk/",
     "region": "Sønderborg, Jylland",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Andersen & Maillard",
@@ -24,7 +26,8 @@
     "website": "https://www.andersenmaillard.dk/",
     "region": "København, Sjælland",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "April Coffee Roasters",
@@ -33,7 +36,8 @@
     "website": "https://www.aprilcoffeeroasters.com",
     "region": "København, Sjælland",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Berry & Bean",
@@ -42,7 +46,8 @@
     "website": "https://www.berrybean.dk/",
     "region": "Aarhus, Jylland",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Brændeholm Risteri",
@@ -51,7 +56,8 @@
     "website": "https://braendeholmristeri.dk",
     "region": "Faaborg, Fyn",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Buchwalds",
@@ -60,7 +66,8 @@
     "website": "https://buchwalds.dk",
     "region": "Bornholm",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Clever Coffee",
@@ -69,7 +76,8 @@
     "website": "https://clevercoffee.dk/",
     "region": "Odder, Jylland",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Coffee Collective",
@@ -78,16 +86,18 @@
     "website": "https://coffeecollective.dk",
     "region": "København, Sjælland",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Colombani",
     "purchased": 1,
-    "comment": "Purchased, not tried yet. Hele kaffebønner, 4 x 100 gram, økologisk (mellem og lys risteprofil)",
+    "comment": "Loved all the profiles. Got some great cappuccinos and lattes with the grind at a medium 7. I have recently stopped drinking oat milk and whole milk, so all my current lattes are made with 0.5% skimmed milk.\n\nHele kaffebønner, 4 x 100 gram, økologisk (mellem og lys risteprofil)",
     "website": "https://www.colombani.dk/",
     "region": "Ebeltoft, Jylland",
-    "rating": 0,
-    "no_espresso": 0
+    "rating": 2,
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Din Luksus Kaffe",
@@ -96,7 +106,8 @@
     "website": "https://www.dinluksus.dk",
     "region": "Mørkøv, Sjælland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-10-23"
   },
   {
     "name": "København Coffee Lab",
@@ -105,7 +116,8 @@
     "website": "https://copenhagencoffeelab.com",
     "region": "København, Sjælland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-05"
   },
   {
     "name": "Emo Fabrik",
@@ -114,7 +126,8 @@
     "website": "https://emofabrik.dk/",
     "region": "Aarhus, Jylland",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Europa Kaffe og Te",
@@ -123,7 +136,8 @@
     "website": "https://europakaffeogte.dk/shop/",
     "region": "",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "GarageRisteriet",
@@ -132,25 +146,28 @@
     "website": "https://garageristeriet.dk",
     "region": "",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Hedekaffe",
     "purchased": 1,
-    "comment": "Colombia Grand Café (Hele bønner, 500g)",
+    "comment": "Colombia Grand Café (Hele bønner, 500g)\n\nLovely beans, but not my favourite. They have a very wide selection, so I need to try at least two or three more roasts from this roastery. The one I chose was likely one that suffers from the timid Breville I have.",
     "website": "https://www.hedekaffe.dk/",
     "region": "",
-    "rating": 0,
-    "no_espresso": 0
+    "rating": 2,
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Hipster Brew",
     "purchased": 1,
-    "comment": "I am sadly forced to purchase the 1 kg option. Even if the coffeee is great it always vexes me to not have a smaller tasting option available. I got the Honduras + Etiopien Espresso",
+    "comment": "I am sadly forced to purchase the 1 kg option. Even if the coffeee is great it always vexes me to not have a smaller tasting option available. I got the Honduras + Etiopien Espresso\n\nThe coffee was perfectly fine, with milk chocolate notes. I was testing three roasteries at the same time when I bought this, so I gave some of the beans away so they would not go stale. I did not do the Honduras justice, I feel. It never really shone. The Etiopien Espresso I loved, with fruity notes.",
     "website": "https://hipsterbrew.com/",
     "region": "",
-    "rating": 0,
-    "no_espresso": 0
+    "rating": 2,
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Holy Bean",
@@ -159,7 +176,8 @@
     "website": "https://holybean.dk/",
     "region": "Aarup, Fyn",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Ideal Kaffe",
@@ -168,7 +186,8 @@
     "website": "https://idealkaffe.dk/",
     "region": "Herning, Jylland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Impact Roasters",
@@ -177,7 +196,8 @@
     "website": "https://impactroasters.dk/",
     "region": "København, Sjælland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Just Coffee",
@@ -186,7 +206,8 @@
     "website": "https://www.justcoffee.dk",
     "region": "Roskilde, Sjælland",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kaffe Lars",
@@ -195,7 +216,8 @@
     "website": "https://kaffelars.dk",
     "region": "Odense, Fyn",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kaffe Værkstedet",
@@ -204,7 +226,8 @@
     "website": "https://kaffevaerkstedet.dk",
     "region": "",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kaffeagenterne",
@@ -213,7 +236,8 @@
     "website": "https://kaffeagenterne.dk/",
     "region": "Randers, Jylland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kaffedepartementet",
@@ -222,7 +246,8 @@
     "website": "https://www.kaffedep.com",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kafferist",
@@ -231,7 +256,8 @@
     "website": "https://kafferist.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kaffevaerket",
@@ -240,7 +266,8 @@
     "website": "https://kaffevaerket.dk",
     "region": "Odense, Fyn",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kama Kaffe",
@@ -249,7 +276,8 @@
     "website": "https://kamakaffe.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kama Lager",
@@ -258,7 +286,8 @@
     "website": "https://www.kamalager.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kontra Coffee",
@@ -267,7 +296,8 @@
     "website": "https://www.kontracoffee.com",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Kristians Kaffe",
@@ -276,7 +306,8 @@
     "website": "https://kristianskaffe.dk",
     "region": "Kvistgård, Sjælland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-10-23"
   },
   {
     "name": "Køge Kafferisteri",
@@ -285,7 +316,8 @@
     "website": "https://koegekafferisteri.dk",
     "region": "Koge, Sjælland",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "LA CABRA",
@@ -294,7 +326,8 @@
     "website": "https://lacabra.com",
     "region": "",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Lagom Coffee",
@@ -303,7 +336,8 @@
     "website": "https://lagomcoffee.com",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Mokkahouse",
@@ -312,7 +346,8 @@
     "website": "https://mokkahouse.dk/",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Mørk Kaffe",
@@ -321,7 +356,8 @@
     "website": "https://moerkkaffe.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Nero Coffee",
@@ -330,7 +366,8 @@
     "website": "https://nerocoffee.dk",
     "region": "Silkeborg, Jylland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-10-23"
   },
   {
     "name": "Nguvu",
@@ -339,7 +376,8 @@
     "website": "https://nguvu.dk",
     "region": "København, Sjælland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-10-23"
   },
   {
     "name": "Nord Roastery",
@@ -348,7 +386,8 @@
     "website": "https://nord-roastery.com",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Nordhavn Coffee",
@@ -357,7 +396,8 @@
     "website": "https://nordhavncoffee.com/",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Nordic Coffee House",
@@ -366,7 +406,8 @@
     "website": "https://nordiccoffeehouse.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Nygaards Kaffe",
@@ -375,7 +416,8 @@
     "website": "https://dengyldneloeve.dk/kat/the-og-kaffe/kaffe/",
     "region": "",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Nørre Snede Kafferisteri",
@@ -384,7 +426,8 @@
     "website": "https://www.noerresnedekafferisteri.dk",
     "region": "Herning , Jylland",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Odsherreds Kafferisteri",
@@ -393,7 +436,8 @@
     "website": "https://www.odsherredskafferisteri.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 1
+    "no_espresso": 1,
+    "added": "2026-03-04"
   },
   {
     "name": "Onsk Kaffe",
@@ -402,7 +446,8 @@
     "website": "https://onsk.dk",
     "region": "Silkeborg, Jylland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-10-23"
   },
   {
     "name": "Original Coffee",
@@ -411,7 +456,8 @@
     "website": "https://originalcoffee.dk",
     "region": "",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Prolog Coffee",
@@ -420,7 +466,8 @@
     "website": "https://www.prologcoffee.com",
     "region": "",
     "rating": 3,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Risteriet",
@@ -429,7 +476,8 @@
     "website": "https://www.risteriet.dk",
     "region": "Glostrup, Sjælland",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Roast Coffee",
@@ -438,7 +486,8 @@
     "website": "https://roast.com",
     "region": "",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Soze Kaffe og Risteri",
@@ -447,7 +496,8 @@
     "website": "https://www.sozekaffe.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Stiller's Coffee",
@@ -456,7 +506,8 @@
     "website": "https://stillerscoffee.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Strandvejsristeriet",
@@ -465,7 +516,8 @@
     "website": "https://www.strandvejsristeriet.dk",
     "region": "",
     "rating": 1,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Svendborg Kafferisteri",
@@ -474,7 +526,8 @@
     "website": "https://kaerspecialiteter.dk/svendborg-kafferisteri/",
     "region": "Svendborg, Fyn",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Te & Kaffe salonen",
@@ -483,7 +536,8 @@
     "website": "https://teogkaffesalonen.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Te & Kaffe specialisten",
@@ -492,7 +546,8 @@
     "website": "https://www.teogkaffespecialisten.dk",
     "region": "Karlslunde, Sjælland",
     "rating": 0,
-    "no_espresso": 1
+    "no_espresso": 1,
+    "added": "2026-03-04"
   },
   {
     "name": "The Brew Company",
@@ -501,7 +556,8 @@
     "website": "https://dk.brew-company.com",
     "region": "København, Sjælland",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-10-23"
   },
   {
     "name": "Vendia Kaffe",
@@ -510,7 +566,8 @@
     "website": "https://vendiakaffe.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Wingreen Coffee",
@@ -519,7 +576,8 @@
     "website": "https://wiingreencoffee.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   },
   {
     "name": "Winthers Kaffe",
@@ -528,6 +586,7 @@
     "website": "https://wintherskaffe.dk/",
     "region": "Odense, Fyn",
     "rating": 2,
-    "no_espresso": 0
+    "no_espresso": 0,
+    "added": "2026-03-04"
   }
 ]
