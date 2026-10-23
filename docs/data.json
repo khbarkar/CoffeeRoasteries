@@ -52,10 +52,10 @@
   {
     "name": "Brændeholm Risteri",
     "purchased": 1,
-    "comment": "Purchased Primo - Vores egen blend til Espresso, not tested",
+    "comment": "Purchased Primo - Vores egen blend til Espresso.\n\nI forgot to write down my experience when I tried this coffee. I was testing a couple of others, and this one did not stand out. I had a full test suite for a week or so with various grind settings and non-dairy milks, as well as 0.5% skimmed milk for lattes. The best I got out of it was a coffee chain latte. Not bad, not great. A very inoffensive blend.",
     "website": "https://braendeholmristeri.dk",
     "region": "Faaborg, Fyn",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0,
     "added": "2026-03-04"
   },
@@ -82,7 +82,7 @@
   {
     "name": "Coffee Collective",
     "purchased": 1,
-    "comment": "Subscription - have gotten I think 10 different kinds.",
+    "comment": "Subscription - have gotten I think 10 different kinds.\n\nI went to a barista course here and discovered the most amazing cherry notes in the espresso, flavours I had never tasted before. This place is why I made this site to begin with. Heavenly coffees. Although some were better than others, I simply did not write all of them down before I started this site.",
     "website": "https://coffeecollective.dk",
     "region": "København, Sjælland",
     "rating": 3,
@@ -112,10 +112,10 @@
   {
     "name": "København Coffee Lab",
     "purchased": 1,
-    "comment": "3 bags   Espresso Tasting Pack\n",
+    "comment": "3 bags Espresso Tasting Pack\n\nI feel I got three packs of the same coffee, and this shipment did not have the magic that freshly roasted beans from micro-roasteries usually have. They were fine coffees, but I would have had a hard time picking them out of regular supermarket beans. Maybe with a proper pro machine any of the three would shine. With oat milk or whole milk in the espresso shots: poor crema and nothing exciting. Still two stars. It is bad coffee, just unremarkable, especially since I tried three beans and they all tasted the same.",
     "website": "https://copenhagencoffeelab.com",
     "region": "København, Sjælland",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0,
     "added": "2026-03-05"
   },
@@ -292,10 +292,10 @@
   {
     "name": "Kontra Coffee",
     "purchased": 1,
-    "comment": "Purchased, Costa Rica Corazon de Jesus Lysristet. Not tested yet",
+    "comment": "Purchased, Costa Rica Corazon de Jesus Lysristet. Very milky, and I had the hardest time getting the full flavour out of this one. Most likely my technique that messed this up.\n\nI usually love Costa Rican coffees, but this one did not have the citrusy note I usually get from them. It tasted like an average good quality arabica bean, to be honest. I need to try more beans from this place, but this one was a little underwhelming.",
     "website": "https://www.kontracoffee.com",
     "region": "",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0,
     "added": "2026-03-04"
   },
@@ -436,7 +436,7 @@
     "website": "https://www.odsherredskafferisteri.dk",
     "region": "",
     "rating": 0,
-    "no_espresso": 1,
+    "no_espresso": 0,
     "added": "2026-03-04"
   },
   {
@@ -525,7 +525,7 @@
     "comment": "Decaf Arabica 250g. Bought in store, the coffee was pretty stale and old. Can't really compete with coffees directly from the roasteries that are fresh.",
     "website": "https://kaerspecialiteter.dk/svendborg-kafferisteri/",
     "region": "Svendborg, Fyn",
-    "rating": 0,
+    "rating": 1,
     "no_espresso": 0,
     "added": "2026-03-04"
   },
