@@ -523,11 +523,11 @@
   },
   {
     "name": "Winthers Kaffe",
-    "purchased": 0,
-    "comment": "Can't see on the website where the roastery is. The shop is in Odense and they claim their coffee is freshly roasted.",
+    "purchased": 1,
+    "comment": "1 kilo of their house blend. A really good silly coffee for any occasion. Good chocolatey espresso. Used 0.5% milk to make tasty lattes.",
     "website": "https://wintherskaffe.dk/",
     "region": "Odense, Fyn",
-    "rating": 0,
+    "rating": 2,
     "no_espresso": 0
   }
 ]
