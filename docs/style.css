@@ -392,6 +392,7 @@ code { background: rgba(0,0,0,.08); padding: .15em .4em; border-radius: 4px; fon
 }
 .badge-purchased { background: var(--color-blue); color: var(--color-white); }
 .badge-not-purchased { background: var(--color-cream-dark); color: var(--color-text-muted); }
+.badge-decaf { background: var(--color-orange); color: var(--color-white); }
 
 .roastery-card-city {
   font-size: 14px; color: var(--color-blue-dark); font-weight: 700;

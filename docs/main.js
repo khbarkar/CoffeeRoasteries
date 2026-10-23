@@ -71,6 +71,11 @@ function createCupRating(rating, maxCups) {
   return html;
 }
 
+// A roastery counts as decaf when its comment mentions it
+function isDecaf(r) {
+  return /decaf|koffeinfri/i.test(r.comment || '');
+}
+
 function createCard(r) {
   const card = document.createElement('div');
   const isRated = r.rating && r.rating > 0;
@@ -99,6 +104,9 @@ function createCard(r) {
     badges += '<span class="roastery-card-badge badge-purchased"><i class="bi bi-bag-check-fill"></i> Purchased</span>';
   } else {
     badges += '<span class="roastery-card-badge badge-not-purchased">Not yet</span>';
+  }
+  if (isDecaf(r)) {
+    badges += '<span class="roastery-card-badge badge-decaf"><i class="bi bi-moon-stars-fill"></i> Decaf</span>';
   }
   bodyParts.push(`<div>${badges}</div>`);
 
@@ -135,11 +143,13 @@ function renderAll() {
   const sort = document.getElementById('sort')?.value || 'alpha';
   const filterPurchased = document.getElementById('filterPurchased')?.checked || false;
   const filterRated = document.getElementById('filterRated')?.checked || false;
+  const filterDecaf = document.getElementById('filterDecaf')?.checked || false;
 
   let items = [...allRoasteries];
 
   if (filterPurchased) items = items.filter(i => i.purchased);
   if (filterRated) items = items.filter(i => i.rating && i.rating > 0);
+  if (filterDecaf) items = items.filter(isDecaf);
 
   if (q) {
     items = items.filter(i =>
@@ -246,7 +256,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initSmoothScroll();
 
   // Filter/sort controls
-  ['search', 'sort', 'filterPurchased', 'filterRated'].forEach(id => {
+  ['search', 'sort', 'filterPurchased', 'filterRated', 'filterDecaf'].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     el.addEventListener('input', renderAll);
