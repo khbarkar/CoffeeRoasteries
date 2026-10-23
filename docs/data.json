@@ -90,6 +90,15 @@
     "no_espresso": 0
   },
   {
+    "name": "Din Luksus Kaffe",
+    "purchased": 0,
+    "comment": "",
+    "website": "https://www.dinluksus.dk",
+    "region": "Mørkøv, Sjælland",
+    "rating": 0,
+    "no_espresso": 0
+  },
+  {
     "name": "København Coffee Lab",
     "purchased": 1,
     "comment": "3 bags   Espresso Tasting Pack\n",
@@ -156,8 +165,8 @@
     "name": "Ideal Kaffe",
     "purchased": 1,
     "comment": "Peru El Mirante - 500g, Hele Bønner",
-    "website": "https://idealkaffe.dk",
-    "region": "",
+    "website": "https://idealkaffe.dk/",
+    "region": "Herning, Jylland",
     "rating": 0,
     "no_espresso": 0
   },
@@ -261,6 +270,15 @@
     "no_espresso": 0
   },
   {
+    "name": "Kristians Kaffe",
+    "purchased": 0,
+    "comment": "",
+    "website": "https://kristianskaffe.dk",
+    "region": "Kvistgård, Sjælland",
+    "rating": 0,
+    "no_espresso": 0
+  },
+  {
     "name": "Køge Kafferisteri",
     "purchased": 1,
     "comment": "NICARAGUA Limited Edition  × 1\nMængde:\n250 Gram. I had some luck with going all the way down to 6 on my grinder. Less than that , on fresh beans, and asphalt comes out and the machine sounds like its about to self-destruct. \n This is a milder flavoured coffee that needs the higher temp and finer grind to flourishm but cheaper home models like mine have a hard time with that.  \n I managed to get a decent cup after prolonging the extraction time a little, allowing for a second of more water ( it really can turn the coffee from sour to delicious, a single second more ) , then raising the temperature to 95° and the grind setting to 6. Tried this coffee with full fat Oatmilk and full fat regular milk and there was very little difference. \n This coffee did not shine in my home machine. I think it needs a grade above mine to truly flourish",
@@ -302,6 +320,24 @@
     "comment": "",
     "website": "https://moerkkaffe.dk",
     "region": "",
+    "rating": 0,
+    "no_espresso": 0
+  },
+  {
+    "name": "Nero Coffee",
+    "purchased": 0,
+    "comment": "",
+    "website": "https://nerocoffee.dk",
+    "region": "Silkeborg, Jylland",
+    "rating": 0,
+    "no_espresso": 0
+  },
+  {
+    "name": "Nguvu",
+    "purchased": 0,
+    "comment": "",
+    "website": "https://nguvu.dk",
+    "region": "København, Sjælland",
     "rating": 0,
     "no_espresso": 0
   },
@@ -358,6 +394,15 @@
     "region": "",
     "rating": 0,
     "no_espresso": 1
+  },
+  {
+    "name": "Onsk Kaffe",
+    "purchased": 0,
+    "comment": "",
+    "website": "https://onsk.dk",
+    "region": "Silkeborg, Jylland",
+    "rating": 0,
+    "no_espresso": 0
   },
   {
     "name": "Original Coffee",
@@ -448,6 +493,15 @@
     "region": "Karlslunde, Sjælland",
     "rating": 0,
     "no_espresso": 1
+  },
+  {
+    "name": "The Brew Company",
+    "purchased": 0,
+    "comment": "",
+    "website": "https://dk.brew-company.com",
+    "region": "København, Sjælland",
+    "rating": 0,
+    "no_espresso": 0
   },
   {
     "name": "Vendia Kaffe",
